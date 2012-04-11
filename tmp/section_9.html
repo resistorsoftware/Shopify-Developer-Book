@@ -17,11 +17,18 @@
 
 <p>Here&#8217;s some pseudocode demonstrating what I mean:</p>
 
-<p>func handle_webhook(request) process_data(request.data) respond(200) end To make sure that you don&#8217;t accidentally run over the timeout limit, you need to defer any processing processing until <em>after</em> the response has been sent. In Rails, Delayed Jobs are perfect for this.</p>
+<pre><code>function handle_webhook(request)
+  process_data(request.data)
+    respond(200)
+end</code></pre>
 
-<p>Here&#8217;s how your code should look:</p>
+<p>To make sure that you don&#8217;t accidentally run over the timeout limit, you need to defer any processing processing until <em>after</em> the response has been sent. Delayed or background jobs are perfect for this.</p>
 
-<p>func handle_webhook(request) schedule_processing(request.data) respond(200) end Even if you&#8217;re only doing a small amount of processing, there are other factors to take into account. On-demand services such as Heroku or PHPFog sometimes need to spin up a new node to handle the request, and this action can take several seconds. Even if your app is only spending five seconds processing data it&#8217;ll still &#8216;fail&#8217; if the underlying server took six seconds to start up.</p>
+<p>Here&#8217;s how your code could look:</p>
+
+<p>function handle_webhook(request) schedule_processing(request.data) respond(200) end</p>
+
+<p>Even if you&#8217;re only doing a small amount of processing, there are other factors to take into account. On-demand services such as Heroku or PHPFog sometimes need to spin up a new node to handle the request, and this action can take several seconds. If your App is only spending five seconds processing data it&#8217;ll still <em>fail</em> if the underlying server took six seconds to start up.</p>
 
 <h3 id='the_interesting_world_of_webhooks'>The interesting world of WebHooks</h3>
 

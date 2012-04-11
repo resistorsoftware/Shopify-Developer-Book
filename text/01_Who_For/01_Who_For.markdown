@@ -1,4 +1,6 @@
-## Who is this For? ##
+## Introduction ##
+
+### Who is this eBook For? ###
 
 Everyone that is interested in Shopify... 
 
@@ -10,8 +12,6 @@ If you know a little something about Shopify, this book will probably teach you 
 
 If you want to develop Apps for Shopify, or build a theme for someone, this book may shed some light on the particulars of doing that. 
 
-## What is assumed by the author ##
+### What is Assumed by the Author ###
 
-Nothing. Assumptions are almost always wrong. This is no written attempt to coddle anyone on the path to mastering some specific aspect of Shopify. This book is **not** a "Learn Shopify in 7 minutes, 7 hours, or 7 days" recipe book. There is no attempt to put into words any of the magic spells, incantations or shimmy shimmy slow dancing in the dark that goes into the workaday world of a professional coder.
-
-
+Nothing. Assumptions are almost always wrong. This is no written attempt to coddle anyone on the path to mastering some specific aspect of Shopify. This book is *not* a "Learn Shopify in 7 minutes, 7 hours, or 7 days" recipe book. There is no attempt to put into words any of the magic spells, incantations or shimmy shimmy slow dancing in the dark that goes into the workaday world of a professional coder.

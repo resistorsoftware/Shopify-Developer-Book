@@ -6,19 +6,21 @@ A common cause for this is an app that does some processing when it receives a w
 
 Here's some pseudocode demonstrating what I mean:
 
-func handle_webhook(request)
-  process_data(request.data)
-  respond(200)
-end
-To make sure that you don't accidentally run over the timeout limit, you need to defer any processing processing until *after* the response has been sent. In Rails, Delayed Jobs are perfect for this.
+    function handle_webhook(request)
+      process_data(request.data)
+        respond(200)
+    end
 
-Here's how your code should look:
+To make sure that you don't accidentally run over the timeout limit, you need to defer any processing processing until *after* the response has been sent. Delayed or background jobs are perfect for this.
 
-func handle_webhook(request)
-  schedule_processing(request.data)
-  respond(200)
-end
-Even if you're only doing a small amount of processing, there are other factors to take into account. On-demand services such as Heroku or PHPFog sometimes need to spin up a new node to handle the request, and this action can take several seconds. Even if your app is only spending five seconds processing data it'll still 'fail' if the underlying server took six seconds to start up.
+Here's how your code could look:
+
+  function handle_webhook(request)
+    schedule_processing(request.data)
+    respond(200)
+  end
+
+Even if you're only doing a small amount of processing, there are other factors to take into account. On-demand services such as Heroku or PHPFog sometimes need to spin up a new node to handle the request, and this action can take several seconds. If your App is only spending five seconds processing data it'll still *fail* if the underlying server took six seconds to start up.
 
 ### The interesting world of WebHooks ###
 
@@ -94,6 +96,3 @@ Shopify provides WebHook requests as XML or as JSON. Most scripting languages us
 ### Cart Customization ###
 
 Without a doubt one of the most useful but also the most difficult aspects of front-end Shopify development is in the use of the cart note and cart attribute features. They are the only way a Shop can collect non-standard information directly from a Shop customer. Any monogrammed handbags, initialed wedding invitations, engraved glass baby bottle etc. will have used the cart note or cart attributes to capture this information as pass it through the order process. Since a cart note or cart attribute is just a key and value, the value is restricted to a string. A string could be a simple name like "Bob" or it could conceivably be a sophisticated Javascript Object like "[{"name": "Joe Blow", "age" : "29", "dob": "1958-01-29"},{"name": "Henrietta Booger", "age" : "19", "dob": "1978-05-21"},..{"name": "Psilly Psilon", "age" : "39", "dob": "1968-06-03"}]". In the App, when we detect cart attributes with JSON, we can parse that JSON and reconstitute the original objects embedded in there. In my opinion it is this feature of Shopify that has made it possible for the Shopify platform to deliver such a wide variety of e-commerce sites while keeping the platform reasonably simple. 
-
-  
-  

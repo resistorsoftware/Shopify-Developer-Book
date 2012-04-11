@@ -1,4 +1,4 @@
-## And you're wondering about clients? ##
+## And You're Wondering About Clients? ##
 
 It is a good thing to wonder about your clients. The amazing thing about hanging out your shingle as a Shopify developer is the sheer unbridled variety of clients you will meet. If you are like me and enjoy sticking pins in maps, working on Shopify will probably force you to buy a Costco sized box of pins for your world map. Like Ham Radio operators of yesteryear, collecting countries, and cities is in and of itself a perk of the job. 
 
@@ -18,7 +18,7 @@ One of my latest favorite ways to explain to clients why they cannot have the co
 
 If a client complains about checkout, I think it is fair to ask them where they get their data supporting their case that one page checkouts convert better than multipage checkouts. Are there enough Ph.D dissertations awarded clearly showing that? Discount Codes are another funny trend these days. As Groupon and Living Social have shown, handing people coupons is good for business. Maybe not for Groupon itself or for the vendors that try it and get swamped by large volumes of orders forcing them to take tiny margins followed by fallow times. Do coupon clippers repeat? Gimmicks? 
 
- In Shopify, a Product has no price. A Product's Variant has a price though. If you set a price on a Variant, you cannot change it willy nilly at any point in a checkout. You cannot make it bigger or smaller. You may want to, but you cannot do it. It often comes up that clients will want to bundle products together and if someone buys the bundle, it should be cheaper! And yes! I believe! I am on my knees, looking up to the skies and believing! Thing is, Shopify does not work that way. If I bundle three Products that cost $10 each together, when they go in the cart, they cost $10 each, and the bundle of them costs $30. It cannot be $25 just because. Some clients shake their heads at this. 
+In Shopify, a Product has no price. A Product's Variant has a price though. If you set a price on a Variant, you cannot change it willy nilly at any point in a checkout. You cannot make it bigger or smaller. You may want to, but you cannot do it. It often comes up that clients will want to bundle products together and if someone buys the bundle, it should be cheaper! And yes! I believe! I am on my knees, looking up to the skies and believing! Thing is, Shopify does not work that way. If I bundle three Products that cost $10 each together, when they go in the cart, they cost $10 each, and the bundle of them costs $30. It cannot be $25 just because. Some clients shake their heads at this. 
 
 My ideal client will understand my points here... and want me to ensure their site works like this... 
 
