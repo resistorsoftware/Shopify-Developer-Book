@@ -1,1 +1,3 @@
 output/*.{html,epub,pdf}
+.DS_STORE
+.sass-cache
