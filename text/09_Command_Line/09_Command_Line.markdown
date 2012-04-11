@@ -1,0 +1,58 @@
+## Command Line Shopify API ##
+
+For the pusposes of quickly developing an App being able to fire off requests to a Shop and process the responses is essential. While WebHooks are a source of incoming data from a Shop, they offer only a small subset of interesting possibilities compared to what is available through the API. 
+
+When firing off a request for a resource from a Shop using one of the formats of JSON or XML, we are using a standard HTTP verb like GET. To quickly send a GET request to a shop with authentication can be an involved setup process using the command line. For example, we could use the venerable curl command to send of a request for a Shop, Product or Collection resource. Doing so by hand can be tedious in my opinion. There are much more sophisticated ways to do this without having to run an App and inspect the responses and run debuggers. While I enjoy single-stepping through live code and inspecting the state of my objects that make up an App, I also appreciate being able to quickly test out a theory or check on code syntax without the burden of that overhead. 
+
+Shopify has a super example of how to do just this and it is a small application they bundle with their Ruby gem. Some time ago, before Rails merged with Merb, the Merbists advanced the concept of command-line interface (CLI)  development for Ruby with the introduction of Thor. Thor is Ruby code that lets you quickly write a command-line interface. The current Shopify API gem comes with one of these built-in.
+
+ If you have installed the Shopify API gem and you start a terminal session on your computer you will be able to test this out fairly quickly. I use RVM to manage all my versions of Ruby, but there are alternatives including RBENV and the usual nothing special at all I use the default installed with my computer. I am making the bold assumption that most developers are using a computer with Ruby (or any dynamic scripting language for that matter, be it Perl, PHP, Python or others) and that a terminal session is part of their toolkit. 
+ 
+When I use Ruby, and I check my installed gems using the gem list command, I see the shopify api gem in my list and I can test for the Shopify CLI by simply typing in the command **shopify**. 
+
+![title](file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/CLI.png)
+
+There are just a few options listed and in order to really cook up some interesting examples we will use the configure option that comes with the command. The options required to configure a shopify session are the Shops API key and a password. To get those values, we will use the Shop itself. For some developers this will mean using their development shop, and for others, their clients have provided access to their shop so a private App can be created, or they created the Private App for the developer and passed on the credentials. The following screen shots show the exact sequence.
+
+![title](file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/Manage%20Apps.png)
+
+![title](file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/Private%20Application.png)
+
+![title](file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/private%20app.png)
+
+When examining the  credentials provided for a Private App Tool, we use the API key and Password along with the shop's name. Once we have completed the configuration, we can access the shop using a console. 
+
+As an example, here is a console session for a development shop, showing how easy it is to query for the Shop's count of products, orders, and the details of a single order.
+
+![title](file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/shoppify%20console.png)
+
+Now we can really test out potential code quickly without incurring much overhead at all. Any kind of code supported by the API can be tested with the fewest possible keystrokes and minimum effort. For example, we know we can access Metafields for a shop just by providing an ID for the resource but what is the real syntax of a call with Active Resource? It can be a challenge to keep perfect API syntax in your head, so we often just try things out to see if they work. 
+
+With this little utility, we can add connections to as many Shops as we want, and we can quickly list them all. So when working on a client shop, one of the first things I would do is use the Admin to create a private Tool. With the API key and Password, I can thus use the Shopify console tool to quickly test out any custom queries I may want to build into an App for the client. 
+
+The second very useful command-line tool that Shopify provides is not in the shopify_api gem, but is a separate gem called shopify_theme. Once this little gem installed, you can use the command **theme** at the command-line. Theme is a wonderful developer CLI. The first thing I do with a new client is create a directory to hold all the files of the client's theme. Once I have this directory in place, I can switch into that directory and begin work on the client site. 
+
+    $ mkdir fizz-buzz.com
+    $ cd fizz-buzz.com
+    $ theme configuration
+    
+ ![title](file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/theme%20console.png)
+ 
+ You can see from the listing of available options that the theme commmand is slightly different from the shopify command. Nonetheless it uses the exact same API key and Password to setup a shop. Once we provide those and the configuration is written out as a file, we can being work. I like to first download the client's entire theme into the working directory so that I can examine their Javascript, and Liquid assets. 
+ 
+    $ theme download
+   
+Once the assets are all downloaded, the first thing to do is setup all the files under version control. When I started programming there was no such thing as version control software, and even into the 1990's there was not much to write home about. Microsoft never offered anything of much use as Visual Source Safe was notorious for bugs that lost code, and CVS was just plain bad. SVN was intended to fix all the problems with CVS, and it works, but it has pretty serious limitations too. Open Source has promoted alternatives like Git, Mercurial and Bazaar and these days, it seems like Git is the choice for many people. So, I use Git. I make a local repository and store all the client's code under version control for safety. 
+
+    $ git init
+    $ git add .
+    $ git commit -m 'initial commit of Shopify code for client XYZ'
+    
+Now I am ready to code. As a quick example, I could fix a bug in a client shop in their Javascript, and improve the site just like that. Before I do anything, I set the theme command to watch the directory for any changes. As soon as a change is registered to a file, for example I saved a line of code, the theme watcher will transmit the changes to the client site. I can quickly verify my edit worked (or not) using the browser, and continue in the fashion. When I am happy a small change is a good change, I simply repeat my previous command with a new message.
+
+    $ git commit -am 'Fixed that pesky jQuery error the client had from blindly copy and pasting some bad code off the Internet'
+    
+ Now I am done. Wonderful. I have their code under version control, and I can make all my edits using my favorite code editing tools. If in two weeks time, the client wants more work done, can simply use the theme download tool to grab any new files or changes to files. Git will tell me what those are, and I can investigate. Sometimes, it is a simple task to fix something this way. At least you have a fighting chance when you are not the only person touching or editing a client site. 
+ 
+    
+

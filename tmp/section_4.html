@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+  <head>
+    <title></title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+
+  <body>
+    <div class="chapter">
+      <h2 id='common_questions'>Common Questions</h2>
+
+<p>There are a lot of reasons to love a hosted platform like Shopify since the responsibility for a lot of the small but necessary implementation details of running a website are Shopify&#8217;s responsibilty. By offering an environment that provides most of the basic features needed to run an e-commerce website, Shopify&#8217;s platform has created a community of businesses that can share insight and knowledge. It is comforting to know that when an issue arises with respect to how to configure a shop, or take advantage of a built-in preference or how to exploit a feature, the community contributions are there as answers.</p>
+
+<p>One of the earliest and still most common question concerns the customization of products. The gamut of how people want to customize products is immense. Glass baby bottles etched with a monogram, handbags with initials stitched into the leather, silver pendant jewelry with the name of the dog or the newest twins on the block, the presentation of a form to collect this information is seemingly a source of endless discussion.</p>
+
+<p>The evolution of Shopify saw the introduction of cart attributes to support the feature of passing extra data with the order, allowing a shop owner to process the order with the extras. Additionally for simple notes there is also the cart note feature. The cart attributes are a key value pair and an order can have as many of these as needed to fully define an order. Anything can serve as a key and good examples are the identification number of a product, or the variant. The value that can be stored with the key is a string. Therefore, it is quite simple to capture some needed monogram for a product.</p>
+
+<pre><code>attribute[&#39;I-am_a_key&#39;] = &quot;welcome to outer space astronaut!&quot;
+attribute[12345678] = &quot;David Bowie&quot;
+attribute[44556677] = &#39;[{name: &quot;quick brown fox&quot;, action: &quot;jumped the lazy dog&quot;}, {name: &quot;lazy hen&quot;, action: &quot;laid no eggs today&quot;}]</code></pre>
+
+<p>Those are three examples of setting an attribute key to some value. Using Javascript it is pretty simple to experiment and set the cart attributes, and then check that they were set correctly too. An interesting fact about using cart attributes is that since the key can be a variant ID, and the value is a string, you can store JSON representations of customization data. The third example I present shows this. The cart attribute for ID 44556677 that could be some variant in my shop inventory has been assigned a string that is JSON or Javascript Object Notation. This is extremely handy in a web application like Shopify. That value could be read as &#8220;There are TWO 44556677 variants in the cart, one is named Quick Brown Fox and the other Lazy Hen&#8221;. Now, when rendering the cart, you could show these names and actions along with the variants themselves. It is possible that the person checks out with this order, and the result displayed in the Shopify admin for the order would not only show the two variants, but in the order note section the shop keeper would see the key and value</p>
+
+<pre><code> 44556677: &#39;[{name: &quot;quick brown fox&quot;, action: &quot;jumped the lazy dog&quot;}, {name: &quot;lazy hen&quot;, action: &quot;laid no eggs today&quot;}]</code></pre>
+
+<p>Now, that is a little ugly it is true, and some shop keepers might balk at having the customizations like that. It is quite possible to deal with this issue with more sophistication. Instead of directly storing the customization data in cart attributes, they could be stored in a cookie, or in a browsers localStorage. That way during the entire shopping session, the site manages the customizations as JSON, but before actually submitting the order, the customization code transfers the JSON to plain english. As an example, if my variant ID represented a Farm Animal, for $24.00, I could rewrite the attribute to be</p>
+
+<pre><code>  attribute[&quot;Farm Animal&quot;] = &quot;Name: Quick Brown Fox, Action: Jumped the Lazy Dog, Name: Lazy Hen, Action: Laid No Eggs&quot;</code></pre>
+
+<p>That is a little more readable and could be interpreted by the Shop owner with little difficulty.</p>
+
+<p>One important aspect of customization that should be addressed is that flexibility like this comes with a certain cost. While it does imply that you collect extra information for a Product, you can lose certain Shopify functionality when you use it. For example, if you have the need to customize a product with four options, Shopify only has three. So you decide to collect the fourth option with a form field, and use the built-in options for the other three. When you make this choice, you lose the ability to keep track of inventory based on that fourth option. If that does not matter, then it is obviously not a problem. I often tell people that if price changes are involved, they have no choice but to use the built in options to customize variants. This costs them SKU&#8217;s and there is a limit of up to 100 customized variants. A virtually unlimited amount of further customization is possible, but it should be applied to options that have no inherent cost or affect on inventory management.</p>
+
+
+    </div>
+  </body>
+</html>

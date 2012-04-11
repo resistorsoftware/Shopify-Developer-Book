@@ -1,0 +1,48 @@
+# The book's title. Will be used everywhere!
+title: "[Your Book Title]"
+
+# The book's language.
+language: en
+
+# Your book copyright info.
+# Here's some examples:
+#
+#   Copyright 2012 by David Lazar.
+#   Copyright 2012 by David Lazar. This work is licensed under MIT License.
+#   This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
+#   This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
+#   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
+#
+copyright: "Copyright (C) 2012 David Lazar."
+
+# Who's publishing this book.
+publisher: "David Lazar"
+
+# When this book was published.
+published_at: "2012-04-10"
+
+# Some book description.
+subject: "[Your book description]"
+
+# Some keywords that identify this book.
+keywords: "[Your book keywords (comma-separated)]"
+
+# Some unique identification. Works great with your domain
+# like `http://yourbook.example.com`.
+uid: "17964ec5c984f304e1b48ea8d6e94710"
+
+# Your book identification like ISBN or ISSN.
+identifier:
+  id: "http://yourbook.example.com"
+  type: "URL" # can be ISBN, ISSN or URL
+
+# This book authors.
+authors:
+  - "David Lazar"
+
+# The theme that will be used for source
+# code syntax highlighting.
+theme: mac_classic
+
+# The base URL from your source code.
+base_url: http://example.com

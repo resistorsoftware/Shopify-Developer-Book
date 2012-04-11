@@ -1,0 +1,3 @@
+## Shop Customizations ##
+
+Shops are presented with the usual modern web protocols and languages such as HTML, Javascript and CSS. Shopify's templating language Liquid is crucial in allowing a shop to render it's resources where needed. If you throw in the presence of both a client-side Javascript API and the Shopify API for Apps, there are an incredible variety of ways available to customize a shop on the Shopify platform.
