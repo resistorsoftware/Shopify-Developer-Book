@@ -1,6 +1,29 @@
 /* ============
 /* = DEFAULTS =
 /* ============
+$code: #578D97
+
+=rounded($radius)
+  -border-radius-topright: $radius
+  -moz-border-radius-topright: $radius
+  -webkit-border-top-right-radius: $radius
+  -border-radius-bottomright: $radius
+  -moz-border-radius-bottomright: $radius
+  -webkit-border-bottom-right-radius: $radius
+  -border-radius-topleft: $radius
+  -moz-border-radius-topleft: $radius
+  -webkit-border-top-left-radius: $radius
+  -border-radius-bottomleft: $radius
+  -moz-border-radius-bottomleft: $radius
+  -webkit-border-bottom-left-radius: $radius
+  
+=rounded-top($radius)
+  -border-radius-topright: $radius
+  -moz-border-radius-topright: $radius
+  -webkit-border-top-right-radius: $radius
+  -border-radius-topleft: $radius
+  -moz-border-radius-topleft: $radius
+  -webkit-border-top-left-radius: $radius
 
 html *
   font: normal normal normal 12pt / normal Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif
@@ -82,8 +105,8 @@ div
       top: 2.5in
       width: 7.25in
     h1
-      color: #f00
-      font-size: 46pt
+      color: #999
+      font-size: 42pt
     p
       font-size: 18pt
       &.description
@@ -108,7 +131,7 @@ div
 
 #chapters
   counter-reset: page 1
-  counter-reset: chapter 1
+  counter-reset: chapter 0
   page-break-before: always
 
 .chapter
@@ -123,7 +146,7 @@ div
   h2
     color: #222
     counter-increment: chapter
-    font-size: 36pt
+    font-size: 32pt
     line-height: 1
     string-set: header "Chapter " counter(chapter) ": " content()
     &::before
@@ -132,7 +155,7 @@ div
       display: block
       font-size: 18pt
       letter-spacing: 0
-      margin-bottom: .2em
+      margin-bottom: .3em
       white-space: pre
   h3, h5
     font-family: "helvetica", arial, sans-serif
@@ -149,12 +172,8 @@ div
     font-weight: normal
     text-transform: uppercase
 
-/* ===========
-/* = IMPRINT =
-/* ===========
-
 .imprint
-  background: #E2E7E2
+  background-color: #E2E7E2
   page: cover
   string-set: header ""
   color: #5b5b5b
@@ -174,18 +193,20 @@ div
 
 pre, code,
   span
-    color: #090
+    color: $code
     font-family: monaco, monospace
     font-size: 9pt
-
+    line-height: 1.0
 pre
   font-size: 8pt
-  line-height: 1.4
-  padding-left: 25pt
+  line-height: 1.0
+  padding: 15pt
+  background-color: #ededed
+  +rounded(2mm)
   code
     font-size: 8pt
-    line-height: 1.4
-    padding-left: 25pt
+    line-height: 1.0
+    padding: 15pt
 
 /* =========
 /* = TABLE =
@@ -195,7 +216,7 @@ table
   border-collapse: collapse
 
 thead th
-  background: #e9e9e9
+  background-color: #e9e9e9
 
 th, td
   border: 1px solid #ccc

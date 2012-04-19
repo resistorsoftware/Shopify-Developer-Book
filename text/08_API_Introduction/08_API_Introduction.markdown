@@ -12,12 +12,12 @@ If we accept that software is one of the most fiendishly diffcult man-made const
 
 A good example would be the task of fulfilling an order. Shopify has a setup option allowing a merchant to select from a few fulfillment companies. What happens when you check out that short list and you do not see your option? Your supply chain from Manufacturer DrubbleZook to warehouse Zingoblork with shipper USPS or Royal Mail is simply not there. But you know every single order can be sent to an App. You know you can select up to 250 orders at once and send them all to an App. So surely an App can be built to handle the fulfillment. An App running in the cloud listening 24/7 for incoming orders. And when it gets an order it robotically follows a set of instructions that ensures the Shopify merchant is going to be happy. The App takes the order apart and inspects it. The App knows where each line item is to be sent. It knows the ID of every variant, and whether a discount code was used. It knows the credit cart issuer. The App can take the order from Shopify and format it for Zingoblork and their special needs. It is 2012 as I write this and Zingoblork warehouse runs off of any of the following data exchange mechanisms:
 
-* a Microsoft DOS server, connected to the Internet by FTP. They only accept CSV files via FTP
-* a Microsoft NT Server, connected to the Internet by sFTP. They only accept CSV files via sFTP
-* email. The company can only deal with email. They have been around forty years, and it's all email all the time
-* HTTP POST. A modern miracle! A warehouse fulfillment company that actually has IT!
-* EDI which we won't even bother to describe, but suffice it to say, the Chevy Vega of exchanges
-* SOAP which makes me want to run away and mow grass for a living
+*  a Microsoft DOS server, connected to the Internet by FTP. They only accept CSV files via FTP
+*  a Microsoft NT Server, connected to the Internet by sFTP. They only accept CSV files via sFTP
+*  email. The company can only deal with email. They have been around forty years, and it's all email all the time
+*  HTTP POST. A modern miracle! A warehouse fulfillment company that actually has IT!
+*  EDI which we won't even bother to describe, but suffice it to say, the Chevy Vega of exchanges
+*  SOAP which makes me want to run away and mow grass for a living
 
 So, the App accepts all orders thanks to the API and perhaps in combination with WebHooks, it processes them, and sends them off to the fulfillment company. Now, once the fulfillment company has accepted the order(s) and sent them off to their final destination, the person would bought the goods needs to know. Some companies will collect all the orders they process for a shop and create a daily manifest of tracking codes assigned to the orders and place those in a holding pen accessible only by a special FTP account. Others will simply send these codes to the Shop via email, completely destroying the Shop keepers inbox and sanity. The best of them will use HTTP POST to send the order with a tracking number back to the App, allowing the App to create a fulfillment using the API with the tracking code. Shopify automatically detects the creation of a new fulfillment and sends an appropriate email. This is wonderful since the App and the API together can close the loop automatically. 
 
