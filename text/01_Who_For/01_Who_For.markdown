@@ -1,4 +1,20 @@
-## Introduction ##
+### Forward
+
+### Preface
+
+I like to think that I don't really mark time with much enthusiasm or rigour. When I began my professional career developing code to non-destructively test steel bridges for structural integrity, I marked off eight years before I sensed I had done enough crazy climbing and driving and that I needed a break. I spent a good five years around the dotcom bubble renting a nice office with good friends trying to make web apps. Then I spent five more years taking on a variety of consulting gigs that in the end never amounted to a hill of beans but taught me how to wear many various business hats. I picked up the Shopify bug and tried working with a boutique web agency. As five more years passed, I realized that I knew a lot about being an independent computer business, and that I knew a lot about tricking out Shopify for an ever growing list of clients. I have yet to give myself an official work title, nor have I declared my intentions or loyalty to any one type of computing and my Corporation is pretty much a sad sack but expensive accounting exercise I leave to those who get a kick out that kind of thing. I am sure it's going to reach a decade in age as neglected as my vinyl collection. One needs a corporation though to run off invoices and interact with clients in foreign nations, so I go along with that. Dividends anyone?
+
+A beautiful autumn day in Montreal and Shopify came for a visit with their CTO Cody, Joey Devilla on the Accordion and Edward the king of the API, with much swag and the company credit cards to cover the beer bill. We owe that to Meeech who organized it all and attracted a small but curious crowd of locals to hear more about Shopify. I decided at that time to pitch this effort, an eBook written from the perspective of a developer with a lot of experience working on Shopify, but not working for Shopify. Over the years my nom de plume of Hunkybill on the Shopify public forums wrote many words on many subjects and I endured the gamut possible responses over time. My all time favorite is still Plonk as that one word continues to tickle my funny bone. If a couple of thousand Hunkybill posts survive on some hard drive in some data center for a few more years that is one thing, but I was pretty sure I wanted to create something a little more structered and formal. 
+
+### Acknowledgements
+
+First an foremost I want to say a big thank you to Shopify for supporting this effort through the Shopify fund. Over the years I expended energy and time recommending Shopify to all comers but at the same time, I can see that I was also critical and not always a perfect gentleman in my writing. Instead of ignoring me and my pitch however, Shopify chose to sweep aside some of the lower points from the past. Taking the high road and for that I am grateful. 
+
+To all the developers and designers that I have interacted with I owe a hearty thanks to as well. Some fine people have come and gone from the Shopify community over the years and I do respect the fact that a lot of their contributions remain useful and just as valid today as they were five years ago. It is very inspiring to have witnessed how one Caroline Schnapp jumped into the Shopify community, starting off with some simple scripting work to make shops better until ultimately she was so valuable to Shopify they hired her! My thanks to Caroline for sharing with me her wisdom about how Shopify really works and for always correcting me when my forum posts are clearly sour or plain wrong. I mean no harm to anyone and I am trying hard to avoid controversy these days.
+
+I also with to thank Tobi from Shopify for his numerous great contributions to open source software like Liquid and Delayed Job. Programmers always learn by studying what other successful programmers have done and I must admit that I have learned many good things from his code. Thanks to Jesse Storimer for sharing his eBook tools with me and his code. His original Shopify API Sinatra application was the inspiration that moved me to develop an App for myself and today I have over 500 installed Apps all based of off Sinatra running well in the cloud thanks to Heroku! The best developer friendly cloud platform has to be Heroku. Thanks also to Cody, Edward, Joey and Harley for the hospitality when I trucked on down the 417 to Ottawa for a visit to the new office. Very swell place to work and I am sure the entire gang that works there have one of the better workplaces in all of Canada to go to on a daily basis.
+
+Thanks to my wife and kids for putting up with a guy who likes to sit in the corner all day and poke away at a keyboard instead of doing something heroic like flying space shuttles or putting out forest fires or saving baby seals from being clubbed. I try to be exciting for you but I just can't seem to find the right chords.
 
 ### Who is this eBook For? ###
 
@@ -14,7 +30,7 @@ If you want to develop Apps for Shopify, or build a theme for someone, this book
 
 ### What is Assumed by the Author ###
 
-Nothing. Assumptions are almost always wrong. This is no written attempt to coddle anyone on the path to mastering some specific aspect of Shopify. This book is *not* a "Learn Shopify in 7 minutes, 7 hours, or 7 days" recipe book. There is no attempt to put into words any of the magic spells, incantations or shimmy shimmy slow dancing in the dark that goes into the workaday world of a professional coder.
+Nothing. Assumptions are almost always wrong. This is no written attempt to coddle anyone on the path to mastering some specific aspect of Shopify. This book is *not* a "Learn Shopify in 7 minutes, 7 hours, or 7 days" recipe book. There is no attempt to put into words any of the magic spells, incantations or dangerous chemistry that goes into the workaday world of a professional Shopify coder.
 
 ### About the Author ###
 

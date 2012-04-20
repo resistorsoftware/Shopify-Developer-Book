@@ -9,9 +9,9 @@
 
   <body>
     <div class="chapter">
-      <h2 id='command_line_shopify_api'>Command Line Shopify API</h2>
+      <h2 id='command_line_shopify'>Command Line Shopify</h2>
 
-<p>For the pusposes of quickly developing an App being able to fire off requests to a Shop and process the responses is essential. While WebHooks are a source of incoming data from a Shop, they offer only a small subset of interesting possibilities compared to what is available through the API.</p>
+<p>Quick development of Apps requires being able to fire off requests to a shop and to be able to process the responses. While WebHooks are a source of incoming data from a Shop many interesting possibilities are available using a terminal to access the API at the command line.</p>
 
 <p>When firing off a request for a resource from a Shop using one of the formats of JSON or XML, we are using a standard HTTP verb like GET. To quickly send a GET request to a shop with authentication can be an involved setup process using the command line. For example, we could use the venerable curl command to send of a request for a Shop, Product or Collection resource. Doing so by hand can be tedious in my opinion. There are much more sophisticated ways to do this without having to run an App and inspect the responses and run debuggers. While I enjoy single-stepping through live code and inspecting the state of my objects that make up an App, I also appreciate being able to quickly test out a theory or check on code syntax without the burden of that overhead.</p>
 
@@ -20,9 +20,9 @@
 <p>If you have installed the Shopify API gem and you start a terminal session on your computer you will be able to test this out fairly quickly. I use RVM to manage all my versions of Ruby, but there are alternatives including RBENV and the usual nothing special at all I use the default installed with my computer. I am making the bold assumption that most developers are using a computer with Ruby (or any dynamic scripting language for that matter, be it Perl, PHP, Python or others) and that a terminal session is part of their toolkit.</p>
 
 <p>When I use Ruby, and I check my installed gems using the gem list command, I see the shopify api gem in my list and I can test for the Shopify CLI by simply typing in the command <strong>shopify</strong>.</p>
-
-<p><img alt='title' src='file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/CLI.png' /></p>
-
+<div class='figure'>
+<img alt='Available Options for the shopify Command Line Interface' src='file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/CLI2.png' />
+</div>
 <p>There are just a few options listed and in order to really cook up some interesting examples we will use the configure option that comes with the command. The options required to configure a shopify session are the Shops API key and a password. To get those values, we will use the Shop itself. For some developers this will mean using their development shop, and for others, their clients have provided access to their shop so a private App can be created, or they created the Private App for the developer and passed on the credentials. The following screen shots show the exact sequence.</p>
 
 <p><img alt='title' src='file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/Manage%20Apps.png' /></p>
