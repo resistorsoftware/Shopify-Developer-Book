@@ -138,8 +138,12 @@ div
   color: #444
   counter-reset: footnote 0
   page-break-after: always
+  p
+    margin-bottom: 5mm
+    em
+      font-style: italic
   a
-    color: #0AE
+    color: #00F
     text-decoration: none
   h2, h3, h4, h5
     margin: 25pt 0 15pt 0
@@ -202,7 +206,7 @@ pre
   line-height: 1.0
   padding: 15pt
   background-color: #ededed
-  +rounded(2mm)
+  +rounded(4mm)
   code
     font-size: 8pt
     line-height: 1.0
@@ -246,8 +250,8 @@ img
   prince-image-resolution: 96dpi
 
 .figure
-  float: right
-  margin: 0 0 20pt 20pt
+  /*float: right
+  /*margin: 0 0 20pt 20pt
   overflow: auto
   text-align: center
 
@@ -303,6 +307,7 @@ acronym:after
 /* =============
 
 .highlight
+  margin: 5mm 0
   font-size: 20pt
   strong
     color: #b62f32
