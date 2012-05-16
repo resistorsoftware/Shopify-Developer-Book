@@ -1,12 +1,12 @@
 ## How to Handle Webhook Requests
 
-This is a big one and important topic. If Shopify doesn't receive a 200 OK status response within 10 seconds of sending an App a WebHook, Shopify will assume there is a problem and will mark it as a failed attempt. Repeated attempts will be made for up to 48 hours. A common cause for failure is an App that performs some complex processing when it receives a WebHook request before responding. When processing WebHooks a quick 200 OK response that acknowledges receipt of the data is more essential.
+This is a big important topic. If Shopify doesn't receive a 200 OK status response within 10 seconds of sending a WebHook, Shopify will assume there is a problem and will mark it as a failed attempt. Repeated attempts will be made for up to 48 hours. Too many failures and the WebHook is deleted. A common cause for failure is an App that performs too much complex processing when it receives request before responding. When processing WebHooks a quick 200 OK response that acknowledges receipt of the data is essential.
 
 Here's some pseudocode demonstrating what I mean:
 
 @@@ ruby
   def handle_webhook request
-    process_data request.data    # Note that the process_data call could take a lot of time
+    process_data request.data    # Note that the process_data call could take a lot of time, perhaps 2-6 seconds
     status 200
   end
 @@@
@@ -22,15 +22,15 @@ Here's how your code could look:
   end
 @@@
 
-Even if you're only doing a small amount of processing, there are other factors to take into account. On-demand cloud services such as Heroku or PHPFog will need to spin up a new processing node to handle sporadic requests since they often put Apps to sleep when they are not busy. This can take several seconds. If your App is only spending five seconds processing data it'll still *fail* if the underlying server took five seconds to start up.
+Even if you're only doing a small amount of processing there are other factors to take into account. On-demand cloud services such as Heroku or PHPFog will need to spin up a new processing node to handle sporadic requests since they often put Apps to sleep when they are not busy. This can take several seconds. If your App is only spending five seconds processing data it will still *fail* if the underlying server took five seconds to start up.
 
 ### The Interesting World of WebHooks
 
-Shopify does a fine job of introducing and explaining WebHooks on the wiki, and there are some pretty nifty use cases provided. The *best practices* are essential reading and should be thoroughly understood to get the most out of using WebHooks. In my experience with Webhooks I have run into all sorts of interesting issues so I will dedicate some effort to explaining them from an App developer perspective.
+Shopify does a fine job of introducing and explaining WebHooks on the wiki, and there are some pretty nifty use cases provided. The *best practices* are essential reading and should be thoroughly understood to get the most out of using WebHooks. There are all sorts of interesting issues with WebHooks.
 
 [Shopify WebHooks Documentation](http://wiki.shopify.com/WebHook#How_Should_I_Handle_Webhook_Requests)
 
-When you are dealing with Shopify Webhooks you are in the Email & Preferences section of a shop. You can setup a WebHook using the web interface. Pick the type of WebHook you want to use and provide a URL that will be receiving the data. For those without an App to hook up to a shop there are some nifty WebHook testing sites available that are free to use. Let's take one quick example and use RequestBin. The first thing I will do is create a WebHook listener at the [Request Bin](http://requestb.in/ "RequestBin") website.
+When you are dealing with Shopify Webhooks you are in the Email & Preferences section of a shop. You can setup a WebHook using the web interface. Pick the type of WebHook you want to use and provide a URL that will be receiving the data. For those without an App to hook up to a shop there are some nifty WebHook testing sites available that are free to use. Let's take one quick example and use RequestBin. The first thing to do is create a WebHook listener at the [Request Bin](http://requestb.in/ "RequestBin") website.
 
 <div class="figure">
 <img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/request_bin_home2.png" alt="Create a new RequestBin for your WebHook" />
@@ -42,7 +42,7 @@ Pressing the *Create a RequestBin* button creates a new WebHook listener. The re
 <img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/request_bin_created2.png" alt="Newly Created RequestBin" />
 </div>
 
-The RequestBin listener is the URL that can be copied into the Shopify Webhook creation form at the shop's Email & Preferences administration section. http://www.postbin.org/155tzv2 where the code **155tzv2** was generated just for this test. Using the WebHook create form one can pick the type of WebHookto test and specify where to send it. 
+The RequestBin listener is the URL that can be copied into the Shopify Webhook creation form at the shop's Email & Preferences administration section. http://www.postbin.org/155tzv2 where the code **155tzv2** was generated just for this test. Using the WebHook create form one can pick the type of WebHook to test and specify where to send it. 
 
 <div class="figure">
 <img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_created2.png" alt="WebHook Created in Shopify Email and Preferences" />
@@ -54,29 +54,28 @@ When the WebHook has been created you can send it to the RequestBin service any 
 <img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_testable2.png" alt="Testable WebHook" />
 </div>
 
-The ability to delete a WebHook as well as test it in the shop has on occasion burned me. In my haste to deal with a situation involving WebHooks I have been guilty of accidentally pressing the trashcan icon and removing a WebHook that should *never have been removed*. Ooops! It can take only seconds of carelessness to decouple a shop set for live e-commerce sales from a crucial App running and connected to the shop. Be careful when clicking around these parts!
+The links to delete a WebHook as well as test are beside each other. Exercise some caution when click in this neighborhood! It is easy to accidentally press the trashcan icon and remove a WebHook that should *never be removed*. Ooops! It can take only seconds of carelessness to decouple a shop from a crucial App.
 
-Sending a test is easy, and the result should be immediately available in RequestBin. My example shows a test order in JSON format. 
+Sending a test is easy, and the result should be immediately available in RequestBin. The example shows a test order in JSON format. 
 
 <div class="figure">
 <img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_results2.png" alt="WebHook Results" />
 </div>
 
-Looking closely at the sample order data which is in JSON format we see there is a complete test order to work with. We have closed the loop on the concept of creating, testing and capturing WebHooks. The listener at RequestBin is a surrogate for a real one that would exist in an App but it can prove useful as a development tool. 
+Looking closely at the sample order data which is in JSON format there is a complete order to work with. The loop is loop is closed on the concept of creating, testing and capturing WebHooks. The listener at RequestBin is a surrogate for a real one that would exist in an App but it can prove useful as a development tool. 
 
-For the discussion of WebHook testing we note that the sample data from Shopify is great for testing connectivity more than for testing out an App. Close examination of the provided test data shows a lot of the fields are empty or null. What would be nice is to be able send real data to an App without the hassle of actually using the Shop and booking test orders. For example, say you are developing an Application to test out a fancy order fulfillment routine a shop needs. 
+For the discussion of WebHook testing note that the sample data from Shopify is good for testing connectivity but not so much for testing an App. Close examination of the provided data shows a lot of the fields are empty or null. It would be nice to be able send real data to an App without the hassle of actually using the shop and booking orders. A real scenario might be to test and establish:
 
-You know you need to test a couple of specific aspects of an Order, namely:
-1. Ensure the WebHook order data actually came from Shopify, and that you have the shop identification to work on. 
-2. Ensure you do not already have this order processed as it makes no sense to process a *PAID* order two or more times.
-3. You know you need to parse out the credit card used, and the shipping charges, and the discount codes used if any. 
-4. There could be product customization data in the cart note or cart attributes that need to be examined.
+1. Ensure the WebHook order data actually came from Shopify, and that you have the source shop correctly identified. 
+2. Ensure there is not already an identical order as it makes no sense to process a *PAID* order two or more times.
+3. Parsing out the credit card used, and the shipping charges, and the discount codes used if any is needed. 
+4. Parsing out any product customization data in the cart note or cart attributes.
 
-This small list introduces some issues that may not be obvious to new developers to the Shopify platform. We can address each one and hopefully that will provide some useful insight into how you can structure an App to best deal with WebHooks from Shopify.
+This small list introduces some issues that may not be obvious to new developers to the Shopify platform. Addressing each one will provide some useful insight into how to structure an App to deal with real WebHooks from Shopify.
 
 ### WebHook Validation
 
-When you setup an App in the Shopify Partner web application one of the key attributes generated by Shopify for the App is the authentication data. Each App will have an API key to identify it as well as a shared secret. These are unique tokens and they are critical to providing a secure exchange of data between Apps and Shopify. In the case of validating the source of a WebHook, both Shopify and the App can use the shared secret. When you use the API to install a WebHook into a Shop, Shopify clearly knows the identity of the App requesting the WebHook to be created, so Shopify uses the shared secret associated with the App and makes it part of the WebHook itself. Before Shopify sends off a WebHook created by an App it will be use the shared secret to compute a Hash of the WebHook payload and embed this in the WebHook's HTTP headers. Any WebHook from Shopify that has been setup with the API will have HTTP_X_SHOPIFY_HMAC_SHA256 in the Request's header. Since the App has access to the shared secret, the App can now use that to decode the incoming request. The Shopify team provides some working code for this.
+When setting up an App in the Shopify Partner web application the key attributes generated by Shopify for the App is the authentication data. Every App has an API key to identify it as well as a shared secret. These are unique tokens and they are critical to providing a secure exchange of data between Apps and Shopify. In the case of validating the source of a WebHook, both Shopify and the App can use the shared secret. When you use the API to install a WebHook into a Shop, Shopify knows the identity of the App requesting the WebHook to be created, so Shopify uses the shared secret associated with the App and makes it part of the WebHook itself. Before Shopify sends off a WebHook created by an App it will be use the shared secret to compute a Hash of the WebHook payload and embed this in the WebHook's HTTP headers. Any WebHook from Shopify that has been setup with the API will have HTTP_X_SHOPIFY_HMAC_SHA256 in the HTTP request header. Since the App has access to the shared secret it can use that to decode the incoming request. The Shopify team provides some working code for this.
 
 @@@ ruby
 SHARED_SECRET = "f10ad00c67b72550854a34dc166d9161"
@@ -87,7 +86,7 @@ def verify_webhook(data, hmac_header)
 end
 @@@
 
-If we were to send the request body as the App received it to this little method, and the value of the HTTP_X_SHOPIFY_HMAC_SHA256 attribute in the request, it can calculate the Hash in the same manner as Shopify did before sending out the request. If the two computed values match, you can be assured the WebHook is valid and came from Shopify. That is why it is important to ensure your shared secret is not widely distrubuted on the Internet. You would lose your ability to judge between valid and invalid requests between Shopify and your App.
+The App calculates a value only it could know. The header provides a value from Shopify If the two computed values match, it is assured the WebHook is valid and came from Shopify. That is why it is important to ensure the shared secret is not widely distrubuted on the Internet. 
 
 ### Looking out for Duplicate Webhooks
 
@@ -99,12 +98,12 @@ A simple way to deal with this might be to have the App record the ID of the inc
 
 A robust way to handle WebHooks is to put in place a Message Queue (MQ) service. All incoming WebHooks should be directed to a message queue. Once an incoming WebHook is successfully added to the queue the App simply returns the 200 Status OK response to Shopify and the WebHook is completed. If that process is subject to network latency or other issues it makes no difference as the queue welcomes any and all WebHooks, duplicates or not. 
 
-With an App directing all incoming WebHooks to an queue a queue worker process can be used to *pop off* WebHooks in the queue for processing. There is no longer a concern over processing speed and the App can do all the sophisticated processing it needs to do at it's leisure. It is possible to be certain whether an orders/paid WebHook has been processed already or not. Duplicated WebHooks are best taken care of with this kind of architecture.
+The App has a queue worker process used to *pop* WebHooks from the queue for processing. There is no longer a concern over processing speed and the App can do all the sophisticated processing it needs to do. It is possible to be certain whether a WebHook has been processed already or not. Duplicated WebHooks are best taken care of with this kind of architecture.
 
 ### Parsing WebHooks
 
-Shopify provides WebHook requests as XML or as JSON. Most scripting languages used to build Apps have XML parsers that can make request processing routine. With the advent of NoSQL databases storing JSON documents such as CouchDB and MongoDB many Apps take advantage of this and prefer all incoming requests to be JSON. Additionally one can use Node.js om the server to process WebHooks and so JSON is a natural fit for those applications. Since the logic of searching a request for a specific field is the same for both formats, it is up to the App author to choose the format they prefer. 
+Shopify provides WebHook requests as XML or JSON. Most scripting languages have XML and JSON parsers to make request processing easy. With the advent of NoSQL databases, storing JSON as documents in CouchDB or MongoDB is possible. It is also easy to use Node.js on the server to process WebHooks where JSON is a natural fit. Since the logic of searching a request for a specific field is the same for both formats, it is up to the App author to choose the format they prefer. 
 
 ### Cart Customization
 
-Without a doubt one of the most useful but also a more difficult aspect of front end Shopify development is in the use of the cart note and cart attribute features. They are the only way a shop can collect non-standard information directly from a shop customer. Any monogrammed handbags, initialed wedding invitations, engraved glass baby bottles etc. will have used the cart note or cart attributes to capture this information and pass it through the order process. Since a cart note or cart attribute is just a key and value, the value is restricted to a string. A string could be a simple name like "Bob" or it could conceivably be a sophisticated Javascript Object like "[{"name": "Joe Blow", "age" : "29", "dob": "1958-01-29"},{"name": "Henrietta Booger", "age" : "19", "dob": "1978-05-21"},..{"name": "Psilly Psilon", "age" : "39", "dob": "1968-06-03"}]". In the App, when we detect cart attributes with JSON, we can parse that JSON and reconstitute the original objects embedded in there. In my opinion it is this pattern of augmenting orders with cart attributes, passing them to Apps by WebHook and then parsing out the special attributes that has made it possible for the Shopify platform to deliver such a wide variety of e-commerce sites while keeping the platform reasonably simple. 
+Without a doubt one of the most useful but also a more difficult aspect of front end Shopify development is in the use of the cart note and cart attribute features. They are the only way a shop can collect non-standard information from a customer. Any monogrammed handbags, initialed wedding invitations, engraved glass baby bottles etc. will have used the cart note or cart attributes to capture this information and pass it through the order process. Since a cart note or cart attribute is just a key and value, the value is restricted to a string. A string could be a simple name like "Bob" or it could conceivably be a sophisticated Javascript Object like "[{"name": "Joe Blow", "age" : "29", "dob": "1958-01-29"},{"name": "Henrietta Booger", "age" : "19", "dob": "1978-05-21"},..{"name": "Psilly Psilon", "age" : "39", "dob": "1968-06-03"}]". In the App, when parsing cart attributes with JSON, it is possible to reconstitute the original object embedded there. This pattern of augmenting orders with cart attributes, passing them to Apps by WebHook for processing has made it possible for the Shopify platform to deliver a wide variety of sites with unique features.
