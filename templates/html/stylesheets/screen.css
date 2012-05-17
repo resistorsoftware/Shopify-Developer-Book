@@ -173,27 +173,29 @@ div.frontcover div {
 }
 /* line 107, ../sass/layout.sass */
 div.frontcover h1 {
-  color: #999999;
+  color: #00aaee;
   font-size: 42pt;
+  text-align: center;
 }
-/* line 110, ../sass/layout.sass */
+/* line 112, ../sass/layout.sass */
 div.frontcover p {
   font-size: 18pt;
 }
-/* line 112, ../sass/layout.sass */
+/* line 114, ../sass/layout.sass */
 div.frontcover p.description {
   color: #666666;
-  font: italic normal normal 14pt/normal Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
-  margin-top: -0.1in;
+  font: normal normal normal 16pt/normal Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
+  margin-top: 5mm;
 }
-/* line 116, ../sass/layout.sass */
+/* line 118, ../sass/layout.sass */
 div.frontcover p.authors {
-  color: black;
-  font-style: italic;
-  position: absolute;
-  top: 0;
+  color: #666666;
+  font: italic normal normal 14pt/normal Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
+  margin-top: 3mm;
+  /*position: absolute */
+  /*top: 0 */
 }
-/* line 121, ../sass/layout.sass */
+/* line 124, ../sass/layout.sass */
 div.frontcover * {
   margin: 0;
 }
@@ -204,37 +206,37 @@ div.frontcover * {
 /* =========== */
 /* = CHAPTER = */
 /* =========== */
-/* line 132, ../sass/layout.sass */
+/* line 135, ../sass/layout.sass */
 #chapters {
   counter-reset: page 1;
   counter-reset: chapter 0;
   page-break-before: always;
 }
 
-/* line 137, ../sass/layout.sass */
+/* line 140, ../sass/layout.sass */
 .chapter {
   color: #444444;
   counter-reset: footnote 0;
   page-break-after: always;
 }
-/* line 141, ../sass/layout.sass */
+/* line 144, ../sass/layout.sass */
 .chapter p {
   margin-bottom: 5mm;
 }
-/* line 143, ../sass/layout.sass */
+/* line 146, ../sass/layout.sass */
 .chapter p em {
   font-style: italic;
 }
-/* line 145, ../sass/layout.sass */
+/* line 148, ../sass/layout.sass */
 .chapter a {
   color: blue;
   text-decoration: none;
 }
-/* line 148, ../sass/layout.sass */
+/* line 151, ../sass/layout.sass */
 .chapter h2, .chapter h3, .chapter h4, .chapter h5 {
   margin: 25pt 0 15pt 0;
 }
-/* line 150, ../sass/layout.sass */
+/* line 153, ../sass/layout.sass */
 .chapter h2 {
   color: #222222;
   counter-increment: chapter;
@@ -242,7 +244,7 @@ div.frontcover * {
   line-height: 1;
   string-set: header "Chapter " counter(chapter) ": " content();
 }
-/* line 156, ../sass/layout.sass */
+/* line 159, ../sass/layout.sass */
 .chapter h2::before {
   content: "Chapter " counter(chapter);
   color: #999999;
@@ -252,46 +254,46 @@ div.frontcover * {
   margin-bottom: 0.3em;
   white-space: pre;
 }
-/* line 164, ../sass/layout.sass */
+/* line 167, ../sass/layout.sass */
 .chapter h3, .chapter h5 {
   font-family: "helvetica", arial, sans-serif;
 }
-/* line 166, ../sass/layout.sass */
+/* line 169, ../sass/layout.sass */
 .chapter h3 {
   color: #b62f32;
   font-size: 28px;
 }
-/* line 169, ../sass/layout.sass */
+/* line 172, ../sass/layout.sass */
 .chapter h4 {
   font-size: 18px;
   font-family: "helvetica neue", "arial narrow", sans-serif;
 }
-/* line 172, ../sass/layout.sass */
+/* line 175, ../sass/layout.sass */
 .chapter h5 {
   font-size: 15px;
 }
-/* line 174, ../sass/layout.sass */
+/* line 177, ../sass/layout.sass */
 .chapter h6 {
   font-size: 15px;
   font-weight: normal;
   text-transform: uppercase;
 }
 
-/* line 179, ../sass/layout.sass */
+/* line 182, ../sass/layout.sass */
 .imprint {
   background-color: #e2e7e2;
   page: cover;
   string-set: header "";
   color: #5b5b5b;
 }
-/* line 184, ../sass/layout.sass */
+/* line 187, ../sass/layout.sass */
 .imprint * {
   color: #5b5b5b;
   font-family: "Lucida Grande", arial, sans-serif;
   font-size: 10pt;
   margin: 0 0 2pt 0;
 }
-/* line 189, ../sass/layout.sass */
+/* line 192, ../sass/layout.sass */
 .imprint div {
   left: 0.5in;
   position: absolute;
@@ -301,7 +303,7 @@ div.frontcover * {
 /* ========== */
 /* = CODING = */
 /* ========== */
-/* line 199, ../sass/layout.sass */
+/* line 202, ../sass/layout.sass */
 pre span, code span {
   color: #578d97;
   font-family: monaco, monospace;
@@ -309,7 +311,7 @@ pre span, code span {
   line-height: 1;
 }
 
-/* line 204, ../sass/layout.sass */
+/* line 207, ../sass/layout.sass */
 pre {
   font-size: 8pt;
   line-height: 1;
@@ -328,7 +330,7 @@ pre {
   -moz-border-radius-bottomleft: 4mm;
   -webkit-border-bottom-left-radius: 4mm;
 }
-/* line 210, ../sass/layout.sass */
+/* line 213, ../sass/layout.sass */
 pre code {
   font-size: 8pt;
   line-height: 1;
@@ -338,17 +340,17 @@ pre code {
 /* ========= */
 /* = TABLE = */
 /* ========= */
-/* line 219, ../sass/layout.sass */
+/* line 222, ../sass/layout.sass */
 table {
   border-collapse: collapse;
 }
 
-/* line 222, ../sass/layout.sass */
+/* line 225, ../sass/layout.sass */
 thead th {
   background-color: #e9e9e9;
 }
 
-/* line 225, ../sass/layout.sass */
+/* line 228, ../sass/layout.sass */
 th, td {
   border: 1px solid #cccccc;
   font-size: 11pt;
@@ -358,11 +360,11 @@ th, td {
 /* ========= */
 /* = LISTS = */
 /* ========= */
-/* line 234, ../sass/layout.sass */
+/* line 237, ../sass/layout.sass */
 li {
   margin-bottom: 8pt;
 }
-/* line 236, ../sass/layout.sass */
+/* line 239, ../sass/layout.sass */
 li ul, li ol {
   margin-left: 15pt;
 }
@@ -370,20 +372,20 @@ li ul, li ol {
 /* ========== */
 /* = FIGURE = */
 /* ========== */
-/* line 243, ../sass/layout.sass */
+/* line 246, ../sass/layout.sass */
 .figure img:after {
   content: attr("alt");
   display: block;
   font-size: 10pt;
 }
 
-/* line 248, ../sass/layout.sass */
+/* line 251, ../sass/layout.sass */
 img {
   max-width: none;
   prince-image-resolution: 96dpi;
 }
 
-/* line 252, ../sass/layout.sass */
+/* line 255, ../sass/layout.sass */
 .figure {
   /*float: right */
   /*margin: 0 0 20pt 20pt */
@@ -394,25 +396,25 @@ img {
 /* ===================== */
 /* = TABLE OF CONTENTS = */
 /* ===================== */
-/* line 262, ../sass/layout.sass */
+/* line 265, ../sass/layout.sass */
 div.table-of-contents {
   page: toc;
 }
-/* line 264, ../sass/layout.sass */
+/* line 267, ../sass/layout.sass */
 div.table-of-contents h2 {
   font-size: 36pt;
 }
-/* line 266, ../sass/layout.sass */
+/* line 269, ../sass/layout.sass */
 div.table-of-contents a {
   font-size: 11pt;
   text-decoration: none;
 }
-/* line 269, ../sass/layout.sass */
+/* line 272, ../sass/layout.sass */
 div.table-of-contents div.level2 a {
   color: black;
   font-weight: bold;
 }
-/* line 272, ../sass/layout.sass */
+/* line 275, ../sass/layout.sass */
 div.table-of-contents #toc {
   column-count: 2;
   column-fill: auto;
@@ -420,19 +422,19 @@ div.table-of-contents #toc {
   column-rule: none;
   column-width: 45%;
 }
-/* line 278, ../sass/layout.sass */
+/* line 281, ../sass/layout.sass */
 div.table-of-contents #toc div {
   padding-bottom: 10px;
 }
-/* line 280, ../sass/layout.sass */
+/* line 283, ../sass/layout.sass */
 div.table-of-contents div.level3 {
   margin-left: 20px;
 }
-/* line 282, ../sass/layout.sass */
+/* line 285, ../sass/layout.sass */
 div.table-of-contents #toc div.level3 a {
   color: #555555;
 }
-/* line 285, ../sass/layout.sass */
+/* line 288, ../sass/layout.sass */
 div.table-of-contents div a::before {
   color: #888888;
   content: target-counter(attr(href), page) " ";
@@ -442,11 +444,11 @@ div.table-of-contents div a::before {
   margin-right: 4px;
   width: 40px;
 }
-/* line 293, ../sass/layout.sass */
+/* line 296, ../sass/layout.sass */
 div.table-of-contents div.level3 a::before {
   width: 20px;
 }
-/* line 295, ../sass/layout.sass */
+/* line 298, ../sass/layout.sass */
 div.table-of-contents div.level4, div.table-of-contents div.level5, div.table-of-contents div.level6 {
   display: none;
 }
@@ -454,7 +456,7 @@ div.table-of-contents div.level4, div.table-of-contents div.level5, div.table-of
 /* ===================== */
 /* = OTHER TEXT TWEAKS = */
 /* ===================== */
-/* line 302, ../sass/layout.sass */
+/* line 305, ../sass/layout.sass */
 acronym:after {
   content: " (" attr(title) ")";
 }
@@ -462,12 +464,12 @@ acronym:after {
 /* ============= */
 /* = HIGHLIGHT = */
 /* ============= */
-/* line 309, ../sass/layout.sass */
+/* line 312, ../sass/layout.sass */
 .highlight {
   margin: 5mm 0;
   font-size: 20pt;
 }
-/* line 312, ../sass/layout.sass */
+/* line 315, ../sass/layout.sass */
 .highlight strong {
   color: #b62f32;
 }

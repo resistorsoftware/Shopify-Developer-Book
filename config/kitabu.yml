@@ -16,33 +16,33 @@ language: en
 copyright: "Copyright (C) 2012 David Lazar."
 
 # Who's publishing this book.
-publisher: "David Lazar"
+publisher: "David Lazar, P.Eng"
 
 # When this book was published.
-published_at: "2012-04-10"
+published_at: "2012-05-17"
 
 # Some book description.
-subject: "A brief history of customizing Shopify"
+subject: "Six Years of Working with Merchants and their Shops"
 
 # Some keywords that identify this book.
 keywords: "Shopify, software development, API, Javascript, Ruby, cloud computing"
 
 # Some unique identification. Works great with your domain
 # like `http://yourbook.example.com`.
-uid: "http://shopify_development.resistorsoftware.com"
+uid: "http://shopify.resistorsoftware.com"
 
 # Your book identification like ISBN or ISSN.
 identifier:
-  id: "http://shopify_development.resistorsoftware.com"
+  id: "http://shopify.resistorsoftware.com"
   type: "URL" # can be ISBN, ISSN or URL
 
 # This book authors.
 authors:
-  - "David Lazar"
+  - "David Lazar, P.Eng"
 
 # The theme that will be used for source
 # code syntax highlighting.
 theme: mac_classic
 
 # The base URL from your source code.
-base_url: http://shopify_development.resistorsoftware.com
+base_url: http://shopify.resistorsoftware.com
