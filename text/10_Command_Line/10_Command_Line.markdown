@@ -66,5 +66,5 @@ With the code in git it is a great time to start working on the theme. Use the *
 
     $ git commit -am 'Fixed that pesky jQuery error the client had from blindly copy and pasting some bad code off the Internet'
     
- This is a very productive and safe workflow. The code is under version control and it is easy to edit theme code using your favorite tools. If in the future the client wants more work done you just use the _theme download_ command to grab new files or changes to files initiated by the merchant or others. Git will keep track of all changes. You have a fighting chance when you are not the only person touching or editing a merchant site. Squashing some other designers work or other persons files is rarely an acceptable practice!
+ This is a very productive and safe workflow. The code is under version control and it is easy to edit theme code using your favourite tools. If in the future the client wants more work done you just use the _theme download_ command to grab new files or changes to files initiated by the merchant or others. Git will keep track of all changes. You have a fighting chance when you are not the only person touching or editing a merchant site. Squashing some other designers work or other persons files is rarely an acceptable practice!
  

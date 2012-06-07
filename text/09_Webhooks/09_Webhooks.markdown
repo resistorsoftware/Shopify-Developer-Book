@@ -1,4 +1,4 @@
-## How to Handle Webhook Requests
+## How to Handle WebHook Requests
 
 This is a big important topic. If Shopify doesn't receive a 200 OK status response within 10 seconds of sending a WebHook, Shopify will assume there is a problem and will mark it as a failed attempt. Repeated attempts will be made for up to 48 hours. Too many failures and the WebHook is deleted. A common cause for failure is an App that performs too much complex processing when it receives request before responding. When processing WebHooks a quick 200 OK response that acknowledges receipt of the data is essential.
 
@@ -30,7 +30,7 @@ Shopify does a fine job of introducing and explaining WebHooks on the wiki, and 
 
 [Shopify WebHooks Documentation](http://wiki.shopify.com/WebHook#How_Should_I_Handle_Webhook_Requests)
 
-When you are dealing with Shopify Webhooks you are in the Email & Preferences section of a shop. You can setup a WebHook using the web interface. Pick the type of WebHook you want to use and provide a URL that will be receiving the data. For those without an App to hook up to a shop there are some nifty WebHook testing sites available that are free to use. Let's take one quick example and use RequestBin. The first thing to do is create a WebHook listener at the [Request Bin](http://requestb.in/ "RequestBin") website.
+When you are dealing with Shopify WebHooks you are in the Email & Preferences section of a shop. You can setup a WebHook using the web interface. Pick the type of WebHook you want to use and provide a URL that will be receiving the data. For those without an App to hook up to a shop there are some nifty WebHook testing sites available that are free to use. Let's take one quick example and use RequestBin. The first thing to do is create a WebHook listener at the [Request Bin](http://requestb.in/ "RequestBin") website.
 
 <div class="figure">
 <img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/request_bin_home2.png" alt="Create a new RequestBin for your WebHook" />
@@ -42,7 +42,7 @@ Pressing the *Create a RequestBin* button creates a new WebHook listener. The re
 <img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/request_bin_created2.png" alt="Newly Created RequestBin" />
 </div>
 
-The RequestBin listener is the URL that can be copied into the Shopify Webhook creation form at the shop's Email & Preferences administration section. http://www.postbin.org/155tzv2 where the code **155tzv2** was generated just for this test. Using the WebHook create form one can pick the type of WebHook to test and specify where to send it. 
+The RequestBin listener is the URL that can be copied into the Shopify WebHook creation form at the shop's Email & Preferences administration section. http://www.postbin.org/155tzv2 where the code **155tzv2** was generated just for this test. Using the WebHook create form one can pick the type of WebHook to test and specify where to send it. 
 
 <div class="figure">
 <img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_created2.png" alt="WebHook Created in Shopify Email and Preferences" />
@@ -86,13 +86,13 @@ def verify_webhook(data, hmac_header)
 end
 @@@
 
-The App calculates a value only it could know. The header provides a value from Shopify If the two computed values match, it is assured the WebHook is valid and came from Shopify. That is why it is important to ensure the shared secret is not widely distrubuted on the Internet. 
+The App calculates a value only it could know. The header provides a value from Shopify If the two computed values match, it is assured the WebHook is valid and came from Shopify. That is why it is important to ensure the shared secret is not widely distributed on the Internet. 
 
-### Looking out for Duplicate Webhooks
+### Looking out for Duplicate WebHooks
 
 As explained in the WebHook best practices guide, Shopify will send a WebHook out and then wait up to ten seconds for a response status. If that response is not received the WebHook will be resent. This continues until a 200 OK status is received ensuring that even if a network connection is down or some other problem is present Shopify will keep trying to get the WebHook to the App. The initial interval between retries of ten seconds is not practical for a large number of retries so the time interval between requests is constantly extended until the WebHook is only retried every hour or more. If nothing changes within 48 hours an email is sent to the App owner warning them their WebHook receiver is not working and that the WebHook itself will be deleted from the shop. This can have harsh consequences, mitigated by the fact that the email should be sufficient to alert the App owner to the existence of a problem. 
 
-Assuming all is well with the network and the App is receiving WebHooks it is entirely possible that an App will receive the odd duplicate WebHook. Shopify is originating WebHook requests in a Data Center and there are certainly going to be hops through various Internet routers as the WebHook traverses various links to your App. If you use the tracert command to examine these hops you can see the latency or time it takes for each hop. Sometimes, an overloaded router in the path will take a long time to forward the needed data extending the time it takes for a complete exchange between Shopify and an App. Sometimes the App itself can take a long time to process a WebHook and respond. In any case a duplicate is possible and the App might have a problem unless it deals with the possibility of duplicates. 
+Assuming all is well with the network and the App is receiving WebHooks it is entirely possible that an App will receive the odd duplicate WebHook. Shopify is originating WebHook requests in a Data Centre and there are certainly going to be hops through various Internet routers as the WebHook traverses various links to your App. If you use the tracert command to examine these hops you can see the latency or time it takes for each hop. Sometimes, an overloaded router in the path will take a long time to forward the needed data extending the time it takes for a complete exchange between Shopify and an App. Sometimes the App itself can take a long time to process a WebHook and respond. In any case a duplicate is possible and the App might have a problem unless it deals with the possibility of duplicates. 
 
 A simple way to deal with this might be to have the App record the ID of the incoming WebHook resource. For example, on a paid order if the App knows apriori that order 123456 is already processed, any further orders detected with the ID 123456 can be ignored. Turns out in practice this is not a robust solution. A busy shop can inundate an App with orders/paid WebHooks and at any moment no matter how efficient the App is at processing those incoming WebHooks, there can be enough latency to ensure Shopify sends a duplicate order out. 
 
