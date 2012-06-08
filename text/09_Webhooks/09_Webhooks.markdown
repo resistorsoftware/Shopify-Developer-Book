@@ -33,25 +33,25 @@ Shopify does a fine job of introducing and explaining WebHooks on the wiki, and 
 When you are dealing with Shopify Webhooks you are in the Email & Preferences section of a shop. You can setup a WebHook using the web interface. Pick the type of WebHook you want to use and provide a URL that will be receiving the data. For those without an App to hook up to a shop there are some nifty WebHook testing sites available that are free to use. Let's take one quick example and use RequestBin. The first thing to do is create a WebHook listener at the [Request Bin](http://requestb.in/ "RequestBin") website.
 
 <div class="figure">
-<img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/request_bin_home2.png" alt="Create a new RequestBin for your WebHook" />
+  <img src="../images/request_bin_home2.png" alt="Create a new RequestBin for your WebHook" />
 </div>
 
 Pressing the *Create a RequestBin* button creates a new WebHook listener. The result is a generated URL that can be used for testing. Note that one can also make this test private so that only you can see the results of WebHooks sent to the RequestBin. 
 
 <div class="figure">
-<img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/request_bin_created2.png" alt="Newly Created RequestBin" />
+  <img src="../images/request_bin_created2.png" alt="Newly Created RequestBin" />
 </div>
 
 The RequestBin listener is the URL that can be copied into the Shopify Webhook creation form at the shop's Email & Preferences administration section. http://www.postbin.org/155tzv2 where the code **155tzv2** was generated just for this test. Using the WebHook create form one can pick the type of WebHook to test and specify where to send it. 
 
 <div class="figure">
-<img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_created2.png" alt="WebHook Created in Shopify Email and Preferences" />
+  <img src="../images/webhook_created2.png" alt="WebHook Created in Shopify Email and Preferences" />
 </div>
 
 When the WebHook has been created you can send it to the RequestBin service any time by clicking on the **send test notification** link and standing by for a confirmation that it was indeed sent. 
 
 <div class="figure">
-<img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_testable2.png" alt="Testable WebHook" />
+  <img src="../images/webhook_testable2.png" alt="Testable WebHook" />
 </div>
 
 The links to delete a WebHook as well as test are beside each other. Exercise some caution when click in this neighborhood! It is easy to accidentally press the trashcan icon and remove a WebHook that should *never be removed*. Ooops! It can take only seconds of carelessness to decouple a shop from a crucial App.
@@ -59,7 +59,7 @@ The links to delete a WebHook as well as test are beside each other. Exercise so
 Sending a test is easy, and the result should be immediately available in RequestBin. The example shows a test order in JSON format. 
 
 <div class="figure">
-<img src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_results2.png" alt="WebHook Results" />
+  <img src="../images/webhook_results2.png" alt="WebHook Results" />
 </div>
 
 Looking closely at the sample order data which is in JSON format there is a complete order to work with. The loop is loop is closed on the concept of creating, testing and capturing WebHooks. The listener at RequestBin is a surrogate for a real one that would exist in an App but it can prove useful as a development tool. 

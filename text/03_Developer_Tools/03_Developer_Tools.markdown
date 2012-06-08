@@ -32,7 +32,7 @@ Shopify makes a command-line (CLI) utility available that can be installed on an
 
 ### Localhost Development on a Laptop, Desktop or Other Devices ###
 
-With text editing, version control, and a web browser, a developer is ready to tackle almost any kind of Shopify project. To develop an application that can be hooked up to a merchant's shop it is imperative to be able to develop the application on your local machine. Testing a script out on a new concept or idea or running an entire App should not be tied to a server on the Internet. Being able to develop localhost when offline is crucial. Most common scripting languages used to develop web applications like Ruby and Python have nifty web servers for use on a local machine. Other languages get by with programs like Apache and Nginx. If you lose connectivity with the Internet at least you can keep developing and testing an App with this technique.  
+With text editing, version control, and a web browser, a developer is ready to tackle almost any kind of Shopify project. To develop an application that can be hooked up to a merchant's shop it is imperative to be able to develop the application on your local machine. Testing a script out on a new concept or idea or running an entire App should not be tied to a server on the Internet. Being able to develop localhost when offline is crucial. Most common scripting languages used to develop web applications like Ruby and Python have nifty web servers for use on a local machine. Other languages get by with programs like Apache and Nginx. If you lose connectivity with the Internet at least you can keep developing and testing an App with this technique.
 
 ### Pre-Compiled CSS ###
 
