@@ -1,12 +1,43 @@
 # Shopify Developer HandBook
 
-Markdown code was turned into epub, html and PDF version using Kitabu. Clone the fork from Jesse Storimer for starters. It has some nice tweaks not present in the master kitabu repository. [kitabu](https://github.com/jstorimer/kitabu)
+Originally authored by Dave Lazar and edited by Stacey Hsu and Edward Ocampo-Gooding.
 
-After cloning the gem can be build with the command:  *gem build GEMSPEC_FILE* and once built, the gem can be installed for use.
+This book is here to give you, the Shopify Platform Developer a leg up in your new (or old) adventure.
 
-The free version of Prince needs to be present to use Kitabu. A final PDF without branding can be had with an online service, but for testing and development the free version is great. [Prince](http://www.princexml.com/download/)
+## Setup
 
-Since the project exists, the command line directive *kitabu export* will build the project and populate the output directory with the PDF, epub and html version. The markdown files reference artwork in the _images_ directory.
+1. Install bundled dependencies:
 
-I setup the look of the final result using Sass file _templates/html/sass/screen.sass_ that will result in a CSS stylesheet called screen.css being built and used. This screen.css file is referenced in the HTML layout file _templates/html/layout.erb_ that ultimately serves as the reference by which Prince can turn the HTML into nice PDF. Tweaking that sass file is the key to tweaking the look of the final output. 
- 
+    `$ bundle install`
+
+2. Install the trial version of Prince, an HTML to PDF generator. Check the [Prince download page](http://www.princexml.com/download/) for the version for your operating system. Installation for OS X looks like this:
+
+    `$ curl --remote-name http://www.princexml.com/download/prince-8.0-macosx.tar.gz`
+
+    `$ tar zxvf prince-8.0-macosx.tar.gz`
+
+    `$ prince-8.0-macosx/install.sh`
+
+3. Clean up the install:
+
+    `$ rm -rf prince-8.0-macosx prince-8.0-macosx.tar.gz`
+
+## Building
+
+Build the book by running:
+
+    $ bundle exec kitabu export
+
+Results of the build are found in `output/`, like `output/Shopify-Developer-Book.pdf`
+
+## Tweaking
+
+You can change the overall look of the book by altering `templates/html/sass/screen.sass` and rebuilding the book.
+
+## Contributing
+
+Send http://github.com/edward/Shopify-Developer-Book a pull request on GitHub.
+
+## License
+
+Shopify Developer HandBook by Shopify is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License. Read more about the license at http://creativecommons.org/licenses/by-nc/3.0/
