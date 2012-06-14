@@ -26,13 +26,13 @@ This book is here to give you, the Shopify Platform Developer a leg up in your n
 
 Build the book by running:
 
-    $ bundle exec kitabu export
+    $ ./build
 
 Results of the build are found in `output/`, like `output/Shopify-Developer-Book.pdf`
 
 ## Tweaking
 
-You can change the overall look of the book by altering `templates/html/sass/screen.sass` and rebuilding the book.
+You can change the overall look of the book by altering `templates/html/sass/screen.sass` and other files in `templates/html/sass/`, and rebuilding the book.
 
 ## Contributing
 
