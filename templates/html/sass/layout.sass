@@ -243,20 +243,28 @@ li
 /* = FIGURE =
 /* ==========
 
-.figure img:after
-  content: attr("alt")
-  display: block
-  font-size: 10pt
+.figure
+  /* This is just some fancy CSS3 that will print out the contents of an Alt Tag after an image...
+  img:after
+    content: attr("alt")
+    display: block
+    font-size: 11pt
+    font-weight: bold
+    text-align: center
+    margin-bottom: 0.5in
+  
+.figure 
+  margin-top: 0.5in
+  img
+    prince-image-resolution: 96dpi
+    display: block
+    max-width: 7.5in
+    width: 7.5in
+    overflow: hidden
 
 img
-  max-width: none
   prince-image-resolution: 96dpi
 
-.figure
-  /*float: right
-  /*margin: 0 0 20pt 20pt
-  overflow: auto
-  text-align: center
 
 /* =====================
 /* = TABLE OF CONTENTS =

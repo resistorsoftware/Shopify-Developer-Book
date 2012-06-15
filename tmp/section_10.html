@@ -19,23 +19,23 @@
 
 <p>Start a terminal session on your computer and you will be able to test this command out. You do know the console and you do want to have the Ruby scripting language and the shopify api gem installed.</p>
 <div class='figure'>
-<img alt='Available Options for the shopify Command Line Interface' src='file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/CLI2.png' />
+  <img alt='Available Options for the shopify Command Line Interface' src='../images/CLI2.png' />
 </div>
 <h3 id='the_shopify_command_line_console'>The shopify Command Line Console</h3>
 
 <p>There are just a few options listed and in order to really cook up some interesting examples use the configure option that comes with the command. The arguments required to configure a shopify session are the shop&#8217;s API key and a password. To get those values, use the shop itself. For some developers this will mean using their development shop, and for others, their clients have provided access to their shop so a private App can be created, or they created the Private App for the developer and passed on the credentials. The following screen shots show the exact sequence.</p>
 <div class='figure'>
-<img alt='Menu Options to Setup Shop Access for the Command Line' src='file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/Manage%20Apps2.png' />
+  <img alt='Menu Options to Setup Shop Access for the Command Line' src='../images/Manage%20Apps2.png' />
 </div><div class='figure'>
-<img alt='Setting Up Access for a Private Application' src='file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/Private%20Application2.png' />
+  <img alt='Setting Up Access for a Private Application' src='../images/Private%20Application2.png' />
 </div><div class='figure'>
-<img alt='Final Step Reveals the Needed Access Credentials' src='file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/Private%20App.png' />
+  <img alt='Final Step Reveals the Needed Access Credentials' src='../images/Private%20App.png' />
 </div>
 <p>When examining the credentials provided for a Private App Tool, use the API key and password along with the shop name. Once the configuration is completed access the shop using a console is easy.</p>
 
 <p>The following figure is a console session for a development shop showing a query for the shop&#8217;s count of products, orders, and the details of a single order.</p>
 <div class='figure'>
-<img alt='Output of Calling a Shop Using the API' src='file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/shopify_console.png' />
+  <img alt='Output of Calling a Shop Using the API' src='../images/shopify_console.png' />
 </div>
 <p>Testing out potential code snippets quickly without incurring a lot of overhead is a huge benefit. API code can be tested with the fewest possible keystrokes and minimum effort with this handy console. It is possible to access metafield resources by providing an ID for the resource. The syntax of a call with Active Resource can be a challenge to keep in your head. With the console it&#8217;s possible to try command syntax out to see what the exact response is. With the console it is easier to try a few different call patterns until stumbling on the desired one.</p>
 
@@ -44,25 +44,25 @@
 <h3 id='the_shopify_theme_command_line_console'>The Shopify Theme Command Line Console</h3>
 
 <p>A second useful command line tool that Shopify provides is not in the shopify_api gem but is a separate gem called shopify_theme. With this gem installed on a system you can use the command <strong>theme</strong> to develop the shop theme. Theme offers a simple workflow. The first thing to do with a shop development project is to create a directory to hold all the files that make up the merchant&#8217;s theme.</p>
-
-<pre><code>$ mkdir fizz-buzz.com
+<div class='highlight'><pre>$ mkdir fizz-buzz.com
 $ cd fizz-buzz.com
-$ theme configuration</code></pre>
-<div class='figure'>
-<img alt='Output of the Theme Command Line Console' src='file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/theme%20console2.png' />
+$ theme configuration
+</pre>
+</div><div class='figure'>
+  <img alt='Output of the Theme Command Line Console' src='../images/theme%20console2.png' />
 </div>
 <p>The listing of available options and arguments to the <em>theme</em> commmand is slightly different from the <em>shopify</em> command. It does use the same API key and password to access shop resources. The configuration is saved as a file config.yml. The first step useful step once configured is to download the complete theme. $ theme download</p>
 
 <p>Once the assets are downloaded setup the files under version control. Make a local repository with git and store the client&#8217;s code under version control for safety. Advanced developers might even add a git remote pointing at github so that all work is safely stored in a private repository there too.</p>
-
-<pre><code>$ git init
+<div class='highlight'><pre>$ git init
 $ git add .
-$ git commit -m &#39;initial commit of Shopify code for client XYZ&#39;</code></pre>
-
+$ git commit -m &#39;initial commit of Shopify code for client XYZ&#39;
+</pre>
+</div>
 <p>With the code in git it is a great time to start working on the theme. Use the <em>theme watch</em> command to <em>watch</em> the directory for any changes. As soon as a change is registered to a file, the theme watcher will transmit the changed file to the client site where the file was downloaded from. Any changes can be stored in git, ensuring a smooth and hassle free development experience.</p>
-
-<pre><code>$ git commit -am &#39;Fixed that pesky jQuery error the client had from blindly copy and pasting some bad code off the Internet&#39;</code></pre>
-
+<div class='highlight'><pre>$ git commit -am &#39;Fixed that pesky jQuery error the client had from blindly copy and pasting some bad code off the Internet&#39;
+</pre>
+</div>
 <p>This is a very productive and safe workflow. The code is under version control and it is easy to edit theme code using your favorite tools. If in the future the client wants more work done you just use the <em>theme download</em> command to grab new files or changes to files initiated by the merchant or others. Git will keep track of all changes. You have a fighting chance when you are not the only person touching or editing a merchant site. Squashing some other designers work or other persons files is rarely an acceptable practice!</p>
 
 

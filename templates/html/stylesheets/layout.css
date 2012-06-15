@@ -304,48 +304,59 @@ li ul, li ol {
 /* = FIGURE = */
 /* ========== */
 /* line 246, ../sass/layout.sass */
+.figure {
+  /* This is just some fancy CSS3 that will print out the contents of an Alt Tag after an image... */
+}
+/* line 248, ../sass/layout.sass */
 .figure img:after {
   content: attr("alt");
   display: block;
-  font-size: 10pt;
-}
-
-/* line 251, ../sass/layout.sass */
-img {
-  max-width: none;
-  prince-image-resolution: 96dpi;
-}
-
-/* line 255, ../sass/layout.sass */
-.figure {
-  /*float: right */
-  /*margin: 0 0 20pt 20pt */
-  overflow: auto;
+  font-size: 11pt;
+  font-weight: bold;
   text-align: center;
+  margin-bottom: 0.5in;
+}
+
+/* line 256, ../sass/layout.sass */
+.figure {
+  margin-top: 0.5in;
+}
+/* line 258, ../sass/layout.sass */
+.figure img {
+  prince-image-resolution: 96dpi;
+  display: block;
+  max-width: 7.5in;
+  width: 7.5in;
+  overflow: hidden;
+}
+
+/* line 265, ../sass/layout.sass */
+img {
+  prince-image-resolution: 96dpi;
 }
 
 /* ===================== */
 /* = TABLE OF CONTENTS = */
 /* ===================== */
-/* line 265, ../sass/layout.sass */
+/* line 273, ../sass/layout.sass */
 div.table-of-contents {
   page: toc;
 }
-/* line 267, ../sass/layout.sass */
+/* line 275, ../sass/layout.sass */
 div.table-of-contents h2 {
   font-size: 36pt;
 }
-/* line 269, ../sass/layout.sass */
+/* line 277, ../sass/layout.sass */
 div.table-of-contents a {
   font-size: 11pt;
   text-decoration: none;
 }
-/* line 272, ../sass/layout.sass */
+/* line 280, ../sass/layout.sass */
 div.table-of-contents div.level2 a {
   color: black;
   font-weight: bold;
 }
-/* line 275, ../sass/layout.sass */
+/* line 283, ../sass/layout.sass */
 div.table-of-contents #toc {
   column-count: 2;
   column-fill: auto;
@@ -353,19 +364,19 @@ div.table-of-contents #toc {
   column-rule: none;
   column-width: 45%;
 }
-/* line 281, ../sass/layout.sass */
+/* line 289, ../sass/layout.sass */
 div.table-of-contents #toc div {
   padding-bottom: 10px;
 }
-/* line 283, ../sass/layout.sass */
+/* line 291, ../sass/layout.sass */
 div.table-of-contents div.level3 {
   margin-left: 20px;
 }
-/* line 285, ../sass/layout.sass */
+/* line 293, ../sass/layout.sass */
 div.table-of-contents #toc div.level3 a {
   color: #555555;
 }
-/* line 288, ../sass/layout.sass */
+/* line 296, ../sass/layout.sass */
 div.table-of-contents div a::before {
   color: #888888;
   content: target-counter(attr(href), page) " ";
@@ -375,11 +386,11 @@ div.table-of-contents div a::before {
   margin-right: 4px;
   width: 40px;
 }
-/* line 296, ../sass/layout.sass */
+/* line 304, ../sass/layout.sass */
 div.table-of-contents div.level3 a::before {
   width: 20px;
 }
-/* line 298, ../sass/layout.sass */
+/* line 306, ../sass/layout.sass */
 div.table-of-contents div.level4, div.table-of-contents div.level5, div.table-of-contents div.level6 {
   display: none;
 }
@@ -387,7 +398,7 @@ div.table-of-contents div.level4, div.table-of-contents div.level5, div.table-of
 /* ===================== */
 /* = OTHER TEXT TWEAKS = */
 /* ===================== */
-/* line 305, ../sass/layout.sass */
+/* line 313, ../sass/layout.sass */
 acronym:after {
   content: " (" attr(title) ")";
 }
@@ -395,12 +406,12 @@ acronym:after {
 /* ============= */
 /* = HIGHLIGHT = */
 /* ============= */
-/* line 312, ../sass/layout.sass */
+/* line 320, ../sass/layout.sass */
 .highlight {
   margin: 5mm 0;
   font-size: 20pt;
 }
-/* line 315, ../sass/layout.sass */
+/* line 323, ../sass/layout.sass */
 .highlight strong {
   color: #b62f32;
 }

@@ -29,8 +29,7 @@
     <div id="chapters">
       
     <div class="chapter"><h3 id="forward">Forward</h3>
-<div class="figure">
-  <img alt="The Shopify Platform and Users" src="../images/CLI.png" /></div>
+
 <p>Being a software developer for the Shopify platform is a great way to work with computing skills currently in demand and to pay the bills. E-Commerce is seeing explosive growth and there are constantly new markets evolving. Working on Shopify merchant sites and App projects and your email inbox fills with letters like this: &#x201C;Just thought you&#x2019;d like to know Shopify sent you $148.00 USD&#x201D; or &#x201C;FizzBuzz.com just sent you $2622.50 USD with PayPal&#x201D;. That should inspire the effort to learn the API and programming patterns for e-commerce! It is a great way to earn <em>passive</em> income that you can combine with working for merchants to make <em>active</em> income. It&#x2019;s a career and can be the basis for a successful business, and offers up a wide range of interesting opportunities. Specializing on theme development is rewarding financially for those with design flair and skills. App development and making custom scripts for merchant shops is my favorite. It offers the challenges of using cloud computing, networking, database development, connecting to API driven services like social media and many others. It is great when code you&#x2019;ve written helps a merchant increase their sales 20% overnight! I sincerely hope that developers considering work on Shopify projects read this and get inspired to work on making the next great merchant shop or App. I have worked with and for hundreds of happy merchants and they continue to tell me how happy they are with the Shopify platform.</p>
 
 <h3 id="preface">Preface</h3>
@@ -94,7 +93,7 @@
 
 <p>The diagram presented here shows the relationships three specific types of people will have with Shopify, namely the customer, the merchant and the Shopify App developer.</p>
 <div class="figure">
-<img alt="The Shopify Platform and Users" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/platform.png" /></div>
+  <img alt="The Shopify Platform and Users" src="../images/platform.png" /></div>
 <p>A customer will typically only interact with a shop. A shop may in fact interact with Shopify using the Javascript API to do Ajax. Both the merchant and the App developer also interact with the shop to ensure it is rendering properly. The merchant runs the shop and deals with orders. Merchants may also login to their Apps to control things like fulfillments, inventory management, communications with customers, status updates of orders and any number of other things. App developers will also likely be logging in to the App to ensure operations are optimal. It is possible for both the merchant and the app developer as well as the customer to utilize an App that presents a public facing web presence. For example, the customers could login at <em>someapp.fizzbuzz.com</em> to check on their order status. The merchant might very well login at <em>someapp.fizzbuzz.com/admin/</em> to deal with setting up special aspects of their orders. Finally, all shop WebHooks and perhaps some internal link added to the shop by the App would be accessed at <em>someapp.fizzbuzz.com/shopify/</em> through the Shopify authentication mechanism.</p>
 
 <h3 id="shop-administration">Shop Administration</h3>
@@ -111,7 +110,7 @@
 
 <p>The implication for merchants and developers to note is that they cannot inject code into Liquid. You cannot use Javascript to alter Liquid. It must be understood that Liquid is going to completely process all the shop data and provide the HTML Document Object Model (DOM) that is rendering in a web browser. Shopify provides an opportunity to take advantage of this Liquid rendering stage to make theme rendering somewhat programmable. Any settings that a theme provides as Liquid get processed too. One example of where this comes in handy is in the style sheets for a site. You can name a CSS file <em>uncle-bob.css.liquid</em> and this file will be processed with any Liquid being turned into actual CSS directives. A merchant that wants to make their text <em>bold</em> and <em>red</em> instead of <em>italic</em> and <em>blue</em> could make the changes using the shops theme settings link where these options are presented. There is a huge amount of creativity available with this system and it keeps merchants and developers on track since they cannot break their shop. Totally illegal and bad Liquid will usually generate an error and not be saved or used. Shopify is also all about speed and is one of the <em>fastest</em> hosted platforms available thanks in large part to Liquid that has been compiled into HTML and aggressively cached. If five, ten or even hundreds of people all request the same shop at the same time, they will all get the same copy of the HTML in their browser quickly. Shopify will not be compiling the Liquid five, ten or hundreds times, but instead will deliver the shop from fast cache nearest the customer. This is why it is important for merchants and developers to write efficient Liquid when possible. It is very easy to setup loops within loops within loops to provide a clever shopping experience, but when analysed with an algorithmic eye, these kinds of Liquid constructs are inefficient but they do work. Shopify will not usually interfere with how people use Liquid.</p>
 <div class="figure">
-<img alt="Possible Distributions of Shops and Their Uses of the Shopify Platform" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/TypesOfShops2.png" /></div>
+  <img alt="Possible Distributions of Shops and Their Uses of the Shopify Platform" src="../images/TypesOfShops2.png" /></div>
 <h3 id="javascript-api">Javascript API</h3>
 
 <p>Javascript is usually used inside web browsers on HTML documents. Web applications use HTTP GET and POST to process requests and generate responses for those browsers. Every submit button or link click can result in a whole new web page being sent to the browser. Microsoft developed Asynchronous HTTP that came to be widely known as Ajax (or XHR). Ajax allowed a web site to send a request to a server and then listen for the reply which could come later using a callback function. This radically changed the entire web since it meant a website could replace a small part of itself with new information and not the entire page. Shopify fully embraces this with the Javascript API. Any shop can use Javascript to send Ajax requests. An example would be to load a cart with 16 products each with a unique quantity. Once that completes, another request could then request the contents of the cart to get the total price of all the items in the cart. Javascript can set a cart note from the homepage. It can delete a product in the cart from the product page. There is a whole world of very useful scripting that can be done with basic Javascript and the Javascript API. The Javascript API truly is a crucial and wonderful aspect of developing shops on the Shopify platform.</p>
@@ -316,12 +315,12 @@
 
 <p>A product requires at a minimum only a title. The title will then be turned into a unique <em>handle</em> that is a reference to the product in the shop. A quick example is a product with the title <strong>Quick Brown Fox</strong>. Shopify will set a handle to this product as <strong>quick-brown-fox</strong> and the product will then be found online as the shop&#x2019;s URL appended with <em>/products/quick-brown-fox</em>. With no further action from a merchant a new product has been created and added to inventory with a zero dollar price, infinite inventory for sale, no tags, images, description or other useful attributes. It exists for the purposes of showing up on the site and can be accessed with an API call using the handle or ID it was assigned. You can <em>always</em> get the ID of a product simply by looking at the URL in the shop admin for the product when editing it. An example would be /admin/products/90368349 where the <em>903368349</em> is the unique ID for the product. As long as that product exists in the shop that number will never change. It is used during import and export operations to identify products that will need to be updated. It is also handy to use that number when quickly checking out a product with the API. For example to quickly see if a product has any metafields. A very quick but effective command-line effort would be:</p>
 <div class="figure">
-<img alt="Example API Call" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/api%20call2.png" /></div>
+  <img alt="Example API Call" src="../images/api%20call2.png" /></div>
 <p>With just a couple of keystrokes the product is shown and it has no metafield resources attached to it.</p>
 
 <p>When setting up a product in inventory the variant can be assigned a title as well as a price, SKU and inventory management policies. Shopify also provides three options that can be assigned to a variant. If a product has a colour, size and material they are supported as variant options. These options can be anything so there is a fair amount of flexibility in using them. A product with attributes like density, plasticity, taste, style, or even chemical composition could be setup. Assuming all three options are used, Shopify allows a product to have up to 100 variants. This means a product with five colours, four sizes and three materials would require (5 x 4 x 3 = 60) sixty variants. Each one counts as an SKU in Shopify for the pricing plan selected. It is not necessary to assign an SKU to each variant, and you can assign the same SKU to as many variants as needed. Shopify simply treats the SKU as an attribute with no special meaning. Using the Shopify Ajax API it is very simple to use the handle of a product to get all of it&#x2019;s attributes. If we open up a store that has a version of the API code rendered as part of the theme, we can use the developer tools of our browser to inspect the details.</p>
 <div class="figure">
-<img alt="Getting Product Info using Ajax" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/ajax%20product2.png" /></div>
+  <img alt="Getting Product Info using Ajax" src="../images/ajax%20product2.png" /></div>
 <p>An examination of the object representing a Shopify product shows us the structure of a product&#x2019;s options and how they are responsible for attributes generated for each variant. We can use this to completely customize the way Shopify renders products and variants. Many shops use the code Shopify provides to render each option as a separate HTML select element instead of one select element with each element separated with slashes. When a selection is made, a callback is triggered with the variant and that allows a shop to update things like pricing and availability. It is simple, reliable and it works. It can be relied on by developers to take front-end shop development to the next level beyond those basics.</p>
 
 <p>If there are images uploaded for a product it is possible to detect images that might match the SKU assigned to the variant or perhaps the variant title. It is easy to make up some rules dictating how images that are uploaded for a product are coded so that code can be used in the callback logic.</p>
@@ -401,21 +400,21 @@
 
 <p>When you are dealing with Shopify Webhooks you are in the Email &amp; Preferences section of a shop. You can setup a WebHook using the web interface. Pick the type of WebHook you want to use and provide a URL that will be receiving the data. For those without an App to hook up to a shop there are some nifty WebHook testing sites available that are free to use. Let&#x2019;s take one quick example and use RequestBin. The first thing to do is create a WebHook listener at the <a href="http://requestb.in/" title="RequestBin">Request Bin</a> website.</p>
 <div class="figure">
-<img alt="Create a new RequestBin for your WebHook" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/request_bin_home2.png" /></div>
+  <img alt="Create a new RequestBin for your WebHook" src="../images/request_bin_home2.png" /></div>
 <p>Pressing the <em>Create a RequestBin</em> button creates a new WebHook listener. The result is a generated URL that can be used for testing. Note that one can also make this test private so that only you can see the results of WebHooks sent to the RequestBin.</p>
 <div class="figure">
-<img alt="Newly Created RequestBin" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/request_bin_created2.png" /></div>
+  <img alt="Newly Created RequestBin" src="../images/request_bin_created2.png" /></div>
 <p>The RequestBin listener is the URL that can be copied into the Shopify Webhook creation form at the shop&#x2019;s Email &amp; Preferences administration section. http://www.postbin.org/155tzv2 where the code <strong>155tzv2</strong> was generated just for this test. Using the WebHook create form one can pick the type of WebHook to test and specify where to send it.</p>
 <div class="figure">
-<img alt="WebHook Created in Shopify Email and Preferences" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_created2.png" /></div>
+  <img alt="WebHook Created in Shopify Email and Preferences" src="../images/webhook_created2.png" /></div>
 <p>When the WebHook has been created you can send it to the RequestBin service any time by clicking on the <strong>send test notification</strong> link and standing by for a confirmation that it was indeed sent.</p>
 <div class="figure">
-<img alt="Testable WebHook" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_testable2.png" /></div>
+  <img alt="Testable WebHook" src="../images/webhook_testable2.png" /></div>
 <p>The links to delete a WebHook as well as test are beside each other. Exercise some caution when click in this neighborhood! It is easy to accidentally press the trashcan icon and remove a WebHook that should <em>never be removed</em>. Ooops! It can take only seconds of carelessness to decouple a shop from a crucial App.</p>
 
 <p>Sending a test is easy, and the result should be immediately available in RequestBin. The example shows a test order in JSON format.</p>
 <div class="figure">
-<img alt="WebHook Results" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/webhook_results2.png" /></div>
+  <img alt="WebHook Results" src="../images/webhook_results2.png" /></div>
 <p>Looking closely at the sample order data which is in JSON format there is a complete order to work with. The loop is loop is closed on the concept of creating, testing and capturing WebHooks. The listener at RequestBin is a surrogate for a real one that would exist in an App but it can prove useful as a development tool.</p>
 
 <p>For the discussion of WebHook testing note that the sample data from Shopify is good for testing connectivity but not so much for testing an App. Close examination of the provided data shows a lot of the fields are empty or null. It would be nice to be able send real data to an App without the hassle of actually using the shop and booking orders. A real scenario might be to test and establish:</p>
@@ -473,19 +472,19 @@
 
 <p>Start a terminal session on your computer and you will be able to test this command out. You do know the console and you do want to have the Ruby scripting language and the shopify api gem installed.</p>
 <div class="figure">
-<img alt="Available Options for the shopify Command Line Interface" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/CLI2.png" /></div>
+  <img alt="Available Options for the shopify Command Line Interface" src="../images/CLI2.png" /></div>
 <h3 id="the-shopify-command-line-console">The shopify Command Line Console</h3>
 
 <p>There are just a few options listed and in order to really cook up some interesting examples use the configure option that comes with the command. The arguments required to configure a shopify session are the shop&#x2019;s API key and a password. To get those values, use the shop itself. For some developers this will mean using their development shop, and for others, their clients have provided access to their shop so a private App can be created, or they created the Private App for the developer and passed on the credentials. The following screen shots show the exact sequence.</p>
 <div class="figure">
-<img alt="Menu Options to Setup Shop Access for the Command Line" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/Manage%20Apps2.png" /></div><div class="figure">
-<img alt="Setting Up Access for a Private Application" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/Private%20Application2.png" /></div><div class="figure">
-<img alt="Final Step Reveals the Needed Access Credentials" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/Private%20App.png" /></div>
+  <img alt="Menu Options to Setup Shop Access for the Command Line" src="../images/Manage%20Apps2.png" /></div><div class="figure">
+  <img alt="Setting Up Access for a Private Application" src="../images/Private%20Application2.png" /></div><div class="figure">
+  <img alt="Final Step Reveals the Needed Access Credentials" src="../images/Private%20App.png" /></div>
 <p>When examining the credentials provided for a Private App Tool, use the API key and password along with the shop name. Once the configuration is completed access the shop using a console is easy.</p>
 
 <p>The following figure is a console session for a development shop showing a query for the shop&#x2019;s count of products, orders, and the details of a single order.</p>
 <div class="figure">
-<img alt="Output of Calling a Shop Using the API" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/shopify_console.png" /></div>
+  <img alt="Output of Calling a Shop Using the API" src="../images/shopify_console.png" /></div>
 <p>Testing out potential code snippets quickly without incurring a lot of overhead is a huge benefit. API code can be tested with the fewest possible keystrokes and minimum effort with this handy console. It is possible to access metafield resources by providing an ID for the resource. The syntax of a call with Active Resource can be a challenge to keep in your head. With the console it&#x2019;s possible to try command syntax out to see what the exact response is. With the console it is easier to try a few different call patterns until stumbling on the desired one.</p>
 
 <p>You can add connections to as many shops as needed and you can list them all. When working on a client shop one of the first things to do is to use the shop admin interface and the App tab to create a private tool. The console is super useful to quickly test out any custom queries to build into an App for the merchant.</p>
@@ -493,24 +492,24 @@
 <h3 id="the-shopify-theme-command-line-console">The Shopify Theme Command Line Console</h3>
 
 <p>A second useful command line tool that Shopify provides is not in the shopify_api gem but is a separate gem called shopify_theme. With this gem installed on a system you can use the command <strong>theme</strong> to develop the shop theme. Theme offers a simple workflow. The first thing to do with a shop development project is to create a directory to hold all the files that make up the merchant&#x2019;s theme.</p>
-
-<pre><code>$ mkdir fizz-buzz.com
+<div class="highlight"><pre>$ mkdir fizz-buzz.com
 $ cd fizz-buzz.com
-$ theme configuration</code></pre>
-<div class="figure">
-<img alt="Output of the Theme Command Line Console" src="file://localhost/Users/dlazar/Pictures/Shopify%20E-Book/theme%20console2.png" /></div>
+$ theme configuration
+</pre>
+</div><div class="figure">
+  <img alt="Output of the Theme Command Line Console" src="../images/theme%20console2.png" /></div>
 <p>The listing of available options and arguments to the <em>theme</em> commmand is slightly different from the <em>shopify</em> command. It does use the same API key and password to access shop resources. The configuration is saved as a file config.yml. The first step useful step once configured is to download the complete theme. $ theme download</p>
 
 <p>Once the assets are downloaded setup the files under version control. Make a local repository with git and store the client&#x2019;s code under version control for safety. Advanced developers might even add a git remote pointing at github so that all work is safely stored in a private repository there too.</p>
-
-<pre><code>$ git init
+<div class="highlight"><pre>$ git init
 $ git add .
-$ git commit -m 'initial commit of Shopify code for client XYZ'</code></pre>
-
+$ git commit -m 'initial commit of Shopify code for client XYZ'
+</pre>
+</div>
 <p>With the code in git it is a great time to start working on the theme. Use the <em>theme watch</em> command to <em>watch</em> the directory for any changes. As soon as a change is registered to a file, the theme watcher will transmit the changed file to the client site where the file was downloaded from. Any changes can be stored in git, ensuring a smooth and hassle free development experience.</p>
-
-<pre><code>$ git commit -am 'Fixed that pesky jQuery error the client had from blindly copy and pasting some bad code off the Internet'</code></pre>
-
+<div class="highlight"><pre>$ git commit -am 'Fixed that pesky jQuery error the client had from blindly copy and pasting some bad code off the Internet'
+</pre>
+</div>
 <p>This is a very productive and safe workflow. The code is under version control and it is easy to edit theme code using your favorite tools. If in the future the client wants more work done you just use the <em>theme download</em> command to grab new files or changes to files initiated by the merchant or others. Git will keep track of all changes. You have a fighting chance when you are not the only person touching or editing a merchant site. Squashing some other designers work or other persons files is rarely an acceptable practice!</p>
 
 </div>
