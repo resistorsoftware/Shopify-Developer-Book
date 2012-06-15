@@ -14,12 +14,12 @@ A good example of extending a shop for a merchant, is when fulfilling an order u
 
 An app running in the cloud is listening for incoming orders, 24/7. When it gets an order, it robotically follows a set of instructions that ensures that the merchant is happy. The app takes the order apart and inspects it. The app knows where each line item is to be sent. It knows the ID of every variant and whether a discount code was used. It knows the credit card issuer. The app can take the order details and format it for Zingoblork and their special needs in a special XML format just for them. It is 2012 and the Zingoblork warehouse system runs off of any of the following data exchange mechanisms:
 
-*  a Microsoft DOS server connected to the Internet by FTP. They only accept CSV files via FTP.
-*  a Microsoft NT Server connected to the Internet by sFTP. They only accept CSV files via sFTP.
-*  Email. The company can only deal with email. They have been around forty years and it's all email, all the time.
-*  HTTP POST. A modern miracle! A warehouse fulfillment company that actually has modern infrastructure!
-*  EDI which we won't even bother to describe, but suffice it to say, it is the Chevy Vega of exchanges.
-*  SOAP protocol for those who would rather wash the car with a toothbrush.
+* A Microsoft DOS server connected to the Internet by FTP. They only accept CSV files via FTP.
+* A Microsoft NT Server connected to the Internet by sFTP. They only accept CSV files via sFTP.
+* Email. The company can only deal with email. They have been around forty years and it's all email, all the time.
+* HTTP POST. A modern miracle! A warehouse fulfillment company that actually has modern infrastructure!
+* EDI which we won't even bother to describe, but suffice it to say, it is the Chevy Vega of exchanges.
+* SOAP protocol for those who would rather wash the car with a toothbrush.
 
 The app receives fresh orders thanks to the API and WebHooks. It processes them and sends them off to the fulfillment company. Once the fulfillment company has accepted the order(s) and sent them off to their final destination as a delivery, the customer needs to know. Some companies will collect all the orders they process for a shop and create a daily manifest of tracking codes assigned to the orders. Then, they will place those in a holding pen accessible only by a special FTP account. Others will send the tracking numbers to the merchant via email, completely destroying the merchant's email inbox and sanity in the process. The best fulfillment companies will send the tracking numbers and order ID directly back to the app. This allows the app to use the tracking number to automatically create a fulfillment using the API. Shopify automatically detects the creation of a fulfillment and sends the appropriate email. This is wonderful since the app and the API together can close the loop automatically. Once fulfilled, the app closes the order and the merchant has not lifted a finger.
 

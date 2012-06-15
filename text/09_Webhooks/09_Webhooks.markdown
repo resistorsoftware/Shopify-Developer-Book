@@ -6,7 +6,9 @@ Here's some pseudocode to demonstrate what I mean:
 
 @@@ ruby
   def handle_webhook request
-    process_data request.data    # Note that the process_data call could take a lot of time, perhaps 2-6 seconds
+    # Note that the process_data call could take a while, e.g. 2-6 seconds
+    process_data request.data
+
     status 200
   end
 @@@
@@ -17,7 +19,9 @@ Here's how your code could look:
 
 @@@ ruby
   def handle_webhook request
-    schedule_processing request.data    # this takes no time, so the response is quick
+    # This should take no time, so the overall response is quick
+    schedule_processing request.data
+
     status 200
   end
 @@@
@@ -87,8 +91,9 @@ When setting up an app in the Shopify Partner web application, the key attribute
 @@@ ruby
 SHARED_SECRET = "f10ad00c67b72550854a34dc166d9161"
 def verify_webhook(data, hmac_header)
-  digest  = OpenSSL::Digest::Digest.new('sha256')
-  hmac    = Base64.encode64(OpenSSL::HMAC.digest(digest, SHARED_SECRET, data)).strip
+  digest = OpenSSL::Digest::Digest.new('sha256')
+  hmac = Base64.encode64(OpenSSL::HMAC.digest(digest, SHARED_SECRET, data)).strip
+
   hmac == hmac_header
 end
 @@@
@@ -115,4 +120,11 @@ Shopify provides WebHook requests as XML or JSON. Most scripting languages have 
 
 ### Cart Customization
 
-Without a doubt, one of the most useful but also more difficult aspects of front-end Shopify development, is in the use of the cart note and cart attribute features. They are the only way a shop can collect non-standard information from a customer. Any monogrammed handbags, initialed wedding invitations or engraved glass baby bottles will have used the cart note or cart attributes to capture and pass this information through the order process. Since a cart note or cart attribute is just a key and value, the value is restricted to a string. A string could be a simple name like "Bob" or it could conceivably be a sophisticated Javascript Object like "[{"name": "Joe Blow", "age" : "29", "dob": "1958-01-29"},{"name": "Henrietta Booger", "age" : "19", "dob": "1978-05-21"},..{"name": "Psilly Psilon", "age" : "39", "dob": "1968-06-03"}]". In the app, when parsing cart attributes with JSON, it is possible to reconstitute the original object embedded there. This pattern of augmenting orders with cart attributes and passing them to apps by WebHook for processing, has made it possible for the Shopify platform to deliver a wide variety of sites with unique features.
+Without a doubt, one of the most useful but also more difficult aspects of front-end Shopify development, is in the use of the cart note and cart attribute features. They are the only way a shop can collect non-standard information from a customer. Any monogrammed handbags, initialed wedding invitations or engraved glass baby bottles will have used the cart note or cart attributes to capture and pass this information through the order process. Since a cart note or cart attribute is just a key and value, the value is restricted to a string. A string could be a simple name like "Bob" or it could conceivably be a sophisticated Javascript Object like 
+
+    [{"name": "Joe Blow", "age" : "29", "dob": "1958-01-29"},
+     {"name": "Henrietta Booger", "age" : "19", "dob": "1978-05-21"},
+     ...
+     {"name": "Psilly Psilon", "age" : "39", "dob": "1968-06-03"}]
+
+In the app, when parsing cart attributes with JSON, it is possible to reconstitute the original object embedded there. This pattern of augmenting orders with cart attributes and passing them to apps by WebHook for processing, has made it possible for the Shopify platform to deliver a wide variety of sites with unique features.
