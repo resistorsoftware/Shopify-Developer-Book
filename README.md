@@ -6,6 +6,8 @@ This book is here to give you the Shopify Platform Developer a leg up in your ne
 
 ## Setup
 
+These steps assume you have a working installation of Ruby, bundler, git, and a C/C++ compiler like gcc.
+
 1. Install bundled dependencies:
 
     `$ bundle install`
