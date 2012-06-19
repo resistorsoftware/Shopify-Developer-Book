@@ -1,6 +1,6 @@
 # Shopify Developer HandBook
 
-Originally authored by Dave Lazar and edited by Stacey Hsu and Edward Ocampo-Gooding.
+Originally authored by Dave Lazar and edited by Stacey Hsu, Edward Ocampo-Gooding, and Blair Beckwith.
 
 This book is here to give you the Shopify Platform Developer a leg up in your new (or old) adventure.
 
