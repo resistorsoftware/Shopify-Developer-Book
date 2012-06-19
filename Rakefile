@@ -11,7 +11,7 @@ task :docraptor do
     f.write DocRaptor.create(:document_content => pdf_html,
                              :name             => "Shopify Developer Book",
                              :document_type    => "pdf",
-                             :prince_options => {:baseurl => 'http://upruby.heroku.com/'},
+                             :prince_options => {:baseurl => 'http://cold-journey-9230.heroku.com/'},
                              :test             => !ENV['REALDEAL'])
     print "done!\n"
   end
