@@ -36,7 +36,7 @@ One cool aspect of swapping images is that all the images are readily available 
 
 Shopify is a hosted platform and all merchant shops are known by their myshopify\_domain name combined with the *myshopify.com* root domain. You can use the domain name system (DNS) to help customers find your shop at any domain you want, such as _www.mygreatshop.com_. Despite this, it is still and forever will be _myshop.myshopify.com_ as well. 
 
-Since most apps will be hosted in the cloud, you may have to do an Ajax call to an app on a different domain. How can one do this? Cross-domain Ajax is possible using both CORS and JSONP. You can also use an HTML *iframe* element to embed a form in a shop. The cross-domain Ajax request is common and can be quite useful. It can serve as a support mechanism for sites that need it. To avoid JSONP and just use straight up Ajax, an app needs to be created on a subdomain of the main shop, like _app.mygreatshop.com_. 
+Since most apps will be hosted in the cloud, you may have to do an AJAX call to an app on a different domain. How can one do this? Cross-domain AJAX is possible using both CORS and JSONP. You can also use an HTML *iframe* element to embed a form in a shop. The cross-domain AJAX request is common and can be quite useful. It can serve as a support mechanism for sites that need it. To avoid JSONP and just use straight up Ajax, an app needs to be created on a subdomain of the main shop, like _app.mygreatshop.com_. 
 
 ### Special Invites ###
 

@@ -4,7 +4,9 @@ Development of apps requires the ability to fire off requests to a shop and proc
 
 Firing off a request for a resource to a shop, uses JSON or XML and it occurs with a standard HTTP verb like GET. To send a GET request to a shop with authentication, is an involved process using the command line. A curl command to send off a request to a shop for a product or collection resource is somewhat complex. Who memorizes curl commands? It is tedious. There are better ways to do this. 
 
-Shopify has a super application which they bundle with their Ruby gem, for the Shopify API. Before Rails merged with Merb, the Merbists advanced the concept of command line interface (CLI) development for Ruby, with the introduction of Thor. Thor is Ruby code that generates command-line interfaces and is a nice replacement for rake tasks. The new command is simple - *shopify*.
+Shopify has a super application which they bundle with their Ruby gem, for the Shopify API. Before Rails merged with Merb, the Merbists advanced the concept of command line interface (CLI) development for Ruby, with the introduction of Thor. Thor is Ruby code that generates command-line interfaces and is a nice replacement for rake tasks. The new command is simple:
+
+    $ shopify
 
 Start a terminal session on your computer and you will be able to test this command out. You want to know the console and also want to have the Ruby scripting language and Shopify API gem installed.
 
