@@ -1,3 +1,5 @@
+task :default => :docraptor
+
 task :docraptor do
   print 'Creating Docraptor doc...'
   require 'rubygems'
