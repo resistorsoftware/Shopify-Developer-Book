@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ============ */
 /* = DEFAULTS = */
 /* ============ */
-/* line 28, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 28, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 html * {
   font: normal normal normal 12pt/normal Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
 }
@@ -113,33 +113,33 @@ html * {
 /* ============= */
 /* = BOOKMARKS = */
 /* ============= */
-/* line 64, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 64, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 h1, h2, h3, h4, h5, h6 {
   prince-bookmark-level: none;
 }
 
-/* line 67, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 67, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .frontcover h1 {
   prince-bookmark-level: 1;
 }
 
-/* line 71, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 71, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h2 {
   prince-bookmark-level: 2;
 }
-/* line 73, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 73, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h3 {
   prince-bookmark-level: 3;
 }
-/* line 75, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 75, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h4 {
   prince-bookmark-level: 4;
 }
-/* line 77, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 77, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h5 {
   prince-bookmark-level: 5;
 }
-/* line 79, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 79, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h6 {
   prince-bookmark-level: 6;
 }
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ============= */
 /* = CONTAINER = */
 /* ============= */
-/* line 87, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 87, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.container {
   height: 7in;
   left: 0;
@@ -157,46 +157,42 @@ div.container {
   width: 9.25in;
   z-index: -1;
 }
-/* line 96, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 96, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.frontcover {
   background: white;
 }
-/* line 98, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 98, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.frontcover div {
-  /* left: 1in */
   width: 91%;
   margin: 0 auto;
   text-align: center;
   padding-top: 0.25in;
   position: absolute;
   top: 2.5in;
-  /* width: 7.25in */
 }
-/* line 108, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 106, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.frontcover h1 {
   color: #00aaee;
   font-size: 42pt;
   text-align: center;
 }
-/* line 113, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 111, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.frontcover p {
   font-size: 18pt;
 }
-/* line 115, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 113, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.frontcover p.description {
   color: #666666;
   font: normal normal normal 16pt/normal Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
   margin-top: 5mm;
 }
-/* line 119, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 117, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.frontcover p.authors {
   color: #666666;
   font: italic normal normal 14pt/normal Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
   margin-top: 3mm;
-  /*position: absolute */
-  /*top: 0 */
 }
-/* line 125, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 121, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.frontcover * {
   margin: 0;
 }
@@ -207,38 +203,38 @@ div.frontcover * {
 /* =========== */
 /* = CHAPTER = */
 /* =========== */
-/* line 136, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 132, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 #chapters {
   counter-reset: page 1;
   counter-reset: chapter 0;
   page-break-before: always;
 }
 
-/* line 141, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 137, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter {
   color: #444444;
   counter-reset: footnote 0;
   page-break-after: always;
 }
-/* line 145, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 141, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter p {
   margin-bottom: 5mm;
   line-height: 1.4;
 }
-/* line 148, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 144, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter p em {
   font-style: italic;
 }
-/* line 150, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 146, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter a {
   color: blue;
   text-decoration: none;
 }
-/* line 153, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 149, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h2, .chapter h3, .chapter h4, .chapter h5 {
   margin: 25pt 0 15pt 0;
 }
-/* line 155, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 151, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h2 {
   color: #222222;
   counter-increment: chapter;
@@ -246,7 +242,7 @@ div.frontcover * {
   line-height: 1;
   string-set: header "Chapter " counter(chapter) ": " content();
 }
-/* line 161, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 157, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h2::before {
   content: "Chapter " counter(chapter);
   color: #999999;
@@ -256,41 +252,41 @@ div.frontcover * {
   margin-bottom: 0.3em;
   white-space: pre;
 }
-/* line 169, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 165, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h3 {
   color: #b62f32;
   font-size: 28px;
 }
-/* line 172, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 168, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h4 {
   font-size: 18px;
 }
-/* line 174, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 170, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h5 {
   font-size: 15px;
 }
-/* line 176, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 172, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .chapter h6 {
   font-size: 15px;
   font-weight: normal;
   text-transform: uppercase;
 }
 
-/* line 181, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 177, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .imprint {
   background-color: #e2e7e2;
   page: cover;
   string-set: header "";
   color: #5b5b5b;
 }
-/* line 186, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 182, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .imprint * {
   color: #5b5b5b;
   font-family: "Lucida Grande", arial, sans-serif;
   font-size: 10pt;
   margin: 0 0 2pt 0;
 }
-/* line 191, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 187, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .imprint div {
   left: 0.5in;
   position: absolute;
@@ -300,10 +296,9 @@ div.frontcover * {
 /* ========== */
 /* = CODING = */
 /* ========== */
-/* line 200, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 196, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 pre {
   font-family: monaco, monospace;
-  /* color: $code */
   font-size: 9pt;
   line-height: 1.4;
   padding: 1.5em;
@@ -322,14 +317,14 @@ pre {
   -moz-border-radius-bottomleft: 4mm;
   -webkit-border-bottom-left-radius: 4mm;
 }
-/* line 210, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 205, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 pre span, pre code {
   font-family: monaco, monospace;
   font-size: 9pt;
   line-height: 1.4;
 }
 
-/* line 215, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 210, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 code {
   font-family: monaco, monospace;
   font-size: 11pt;
@@ -338,17 +333,17 @@ code {
 /* ========= */
 /* = TABLE = */
 /* ========= */
-/* line 223, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 218, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 table {
   border-collapse: collapse;
 }
 
-/* line 226, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 221, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 thead th {
   background-color: #e9e9e9;
 }
 
-/* line 229, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 224, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 th, td {
   border: 1px solid #cccccc;
   font-size: 11pt;
@@ -358,12 +353,12 @@ th, td {
 /* ========= */
 /* = LISTS = */
 /* ========= */
-/* line 238, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 233, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 li {
   margin-bottom: 8pt;
 }
 
-/* line 240, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 235, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 ul, ol {
   margin-left: 15pt;
   list-style-type: disc;
@@ -372,20 +367,20 @@ ul, ol {
 /* ========== */
 /* = FIGURE = */
 /* ========== */
-/* line 248, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 243, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .figure img:after {
   content: attr("alt");
   display: block;
   font-size: 10pt;
 }
 
-/* line 253, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 248, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 img {
   max-width: 854px;
   prince-image-resolution: 96dpi;
 }
 
-/* line 257, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 252, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .figure {
   margin: 1em 0;
   overflow: auto;
@@ -395,25 +390,25 @@ img {
 /* ===================== */
 /* = TABLE OF CONTENTS = */
 /* ===================== */
-/* line 266, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 261, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents {
   page: toc;
 }
-/* line 268, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 263, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents h2 {
   font-size: 36pt;
 }
-/* line 270, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 265, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents a {
   font-size: 11pt;
   text-decoration: none;
 }
-/* line 273, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 268, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents div.level2 a {
   color: black;
   font-weight: bold;
 }
-/* line 276, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 271, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents #toc {
   column-count: 2;
   column-fill: auto;
@@ -421,19 +416,19 @@ div.table-of-contents #toc {
   column-rule: none;
   column-width: 45%;
 }
-/* line 282, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 277, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents #toc div {
   padding-bottom: 10px;
 }
-/* line 284, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 279, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents div.level3 {
   margin-left: 20px;
 }
-/* line 286, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 281, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents #toc div.level3 a {
   color: #555555;
 }
-/* line 289, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 284, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents div a::before {
   color: #888888;
   content: target-counter(attr(href), page) " ";
@@ -443,11 +438,11 @@ div.table-of-contents div a::before {
   margin-right: 4px;
   width: 40px;
 }
-/* line 297, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 292, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents div.level3 a::before {
   width: 20px;
 }
-/* line 299, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 294, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 div.table-of-contents div.level4, div.table-of-contents div.level5, div.table-of-contents div.level6 {
   display: none;
 }
@@ -455,7 +450,7 @@ div.table-of-contents div.level4, div.table-of-contents div.level5, div.table-of
 /* ===================== */
 /* = OTHER TEXT TWEAKS = */
 /* ===================== */
-/* line 306, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 301, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 acronym:after {
   content: " (" attr(title) ")";
 }
@@ -463,12 +458,12 @@ acronym:after {
 /* ============= */
 /* = HIGHLIGHT = */
 /* ============= */
-/* line 313, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 308, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .highlight {
   margin: 5mm 0;
   font-size: 20pt;
 }
-/* line 316, /Users/edward/Code/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 311, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
 .highlight strong {
   color: #b62f32;
 }
