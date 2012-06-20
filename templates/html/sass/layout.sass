@@ -32,8 +32,9 @@ html *
 /* = PAGES =
 /* =========
 @page
-  margin: 12mm 16mm 10mm 16mm
+  margin: 0.75in 1in 10mm 1in
   size: 8.5in 11.0in portrait
+
   @footnotes
     border-top: thin solid black
     margin-left: 30%
@@ -41,25 +42,20 @@ html *
     padding-top: 0.3em
 
   @bottom-right
-    color: #000
     content: counter(page)
-    font-family: helvetica, arial, sans-serif
-    font-size: 12px
-    margin-top: -10px
-    margin-right: -40px
-
+    font-size: 0.75em
+    margin-top: -2em
+    margin-right: -2em
 
 @page toc
   margin-right: 6mm
   @bottom-right
     content: ""
 
-
 @page cover
   margin: 0
   @bottom-right
     content: ""
-
 
 /* =============
 /* = BOOKMARKS =
@@ -96,14 +92,17 @@ div
     top: 0
     width: 9.25in
     z-index: -1
+
   &.frontcover
     background: #fff
     div
-      left: 1in
+      width: 91%
+      margin: 0 auto
+
+      text-align: center
       padding-top: 0.25in
       position: absolute
       top: 2.5in
-      width: 7.25in
     h1
       color: #0AE
       font-size: 42pt
@@ -119,8 +118,6 @@ div
         color: #666
         font: italic normal normal 14pt / normal Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif
         margin-top: 3mm
-        /*position: absolute
-        /*top: 0
     *
       margin: 0
 
@@ -143,6 +140,7 @@ div
   page-break-after: always
   p
     margin-bottom: 5mm
+    line-height: 1.4
     em
       font-style: italic
   a
@@ -164,14 +162,11 @@ div
       letter-spacing: 0
       margin-bottom: .3em
       white-space: pre
-  h3, h5
-    font-family: "helvetica", arial, sans-serif
   h3
     color: #b62f32
     font-size: 28px
   h4
     font-size: 18px
-    font-family: "helvetica neue", "arial narrow", sans-serif
   h5
     font-size: 15px
   h6
@@ -198,22 +193,23 @@ div
 /* = CODING =
 /* ==========
 
-pre, code,
-  span
-    color: $code
-    font-family: monaco, monospace
-    font-size: 9pt
-    line-height: 1.0
 pre
-  font-size: 8pt
-  line-height: 1.0
-  padding: 15pt
+  font-family: monaco, monospace
+  font-size: 9pt
+  line-height: 1.4
+  padding: 1.5em
+  margin-bottom: 1.4em
   background-color: #ededed
   +rounded(4mm)
-  code
-    font-size: 8pt
-    line-height: 1.0
-    padding: 15pt
+
+  span, code
+    font-family: monaco, monospace
+    font-size: 9pt
+    line-height: 1.4
+
+code
+  font-family: monaco, monospace
+  font-size: 11pt
 
 /* =========
 /* = TABLE =
@@ -236,8 +232,9 @@ th, td
 
 li
   margin-bottom: 8pt
-  ul, ol
-    margin-left: 15pt
+ul, ol
+  margin-left: 15pt
+  list-style-type: disc
 
 /* ==========
 /* = FIGURE =
@@ -264,7 +261,6 @@ li
 
 img
   prince-image-resolution: 96dpi
-
 
 /* =====================
 /* = TABLE OF CONTENTS =

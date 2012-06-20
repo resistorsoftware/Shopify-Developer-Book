@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd templates/html; compass compile; cd ../..
+bundle exec kitabu export

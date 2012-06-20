@@ -4,19 +4,10 @@ title: "A Developer's View of the Shopify Platform"
 # The book's language.
 language: en
 
-# Your book copyright info.
-# Here's some examples:
-#
-#   Copyright 2012 by David Lazar.
-#   Copyright 2012 by David Lazar. This work is licensed under MIT License.
-#   This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 Unported License.
-#   This work is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License.
-#   This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License.
-#
-copyright: "Copyright (C) 2012 David Lazar."
+copyright: "Copyright Shopify 2012. This work is licensed under a Creative Commons Attribution-NonCommercial 3.0 Unported License."
 
 # Who's publishing this book.
-publisher: "David Lazar, P.Eng."
+publisher: "Shopify"
 
 # When this book was published.
 published_at: "2012-05-17"
@@ -25,15 +16,15 @@ published_at: "2012-05-17"
 subject: "Six Years of Working with Merchants and their Shops"
 
 # Some keywords that identify this book.
-keywords: "Shopify, software development, API, Javascript, Ruby, cloud computing"
+keywords: "Shopify, ecommerce, software development, API, JavaScript, Ruby, cloud computing"
 
 # Some unique identification. Works great with your domain
 # like `http://yourbook.example.com`.
-uid: "http://shopify.resistorsoftware.com"
+uid: "http://shopify.com/developer-handbook"
 
 # Your book identification like ISBN or ISSN.
 identifier:
-  id: "http://shopify.resistorsoftware.com"
+  id: "http://shopify.com/developer-handbook"
   type: "URL" # can be ISBN, ISSN or URL
 
 # This book authors.
@@ -45,4 +36,4 @@ authors:
 theme: mac_classic
 
 # The base URL from your source code.
-base_url: http://shopify.resistorsoftware.com
+base_url: http://shopify.com
