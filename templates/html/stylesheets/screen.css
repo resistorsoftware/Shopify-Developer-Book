@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, /Users/edward/.rvm/gems/ruby-1.9.3-p125-perf/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, /Users/dlazar/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 20, /Users/edward/.rvm/gems/ruby-1.9.3-p125-perf/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 20, /Users/dlazar/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 body {
   line-height: 1;
 }
 
-/* line 22, /Users/edward/.rvm/gems/ruby-1.9.3-p125-perf/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, /Users/dlazar/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 24, /Users/edward/.rvm/gems/ruby-1.9.3-p125-perf/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, /Users/dlazar/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 26, /Users/edward/.rvm/gems/ruby-1.9.3-p125-perf/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, /Users/dlazar/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 28, /Users/edward/.rvm/gems/ruby-1.9.3-p125-perf/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, /Users/dlazar/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 101, /Users/edward/.rvm/gems/ruby-1.9.3-p125-perf/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 101, /Users/dlazar/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 30, /Users/edward/.rvm/gems/ruby-1.9.3-p125-perf/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, /Users/dlazar/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 114, /Users/edward/.rvm/gems/ruby-1.9.3-p125-perf/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 114, /Users/dlazar/.rvm/gems/ruby-1.9.2-p290/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -70,7 +70,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* ============ */
 /* = DEFAULTS = */
 /* ============ */
-/* line 28, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 28, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 html * {
   font: normal normal normal 12pt/normal Constantia, Palatino, "Palatino Linotype", "Palatino LT STD", Georgia, serif;
 }
@@ -113,33 +113,33 @@ html * {
 /* ============= */
 /* = BOOKMARKS = */
 /* ============= */
-/* line 64, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 64, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 h1, h2, h3, h4, h5, h6 {
   prince-bookmark-level: none;
 }
 
-/* line 67, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 67, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .frontcover h1 {
   prince-bookmark-level: 1;
 }
 
-/* line 71, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 71, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h2 {
   prince-bookmark-level: 2;
 }
-/* line 73, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 73, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h3 {
   prince-bookmark-level: 3;
 }
-/* line 75, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 75, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h4 {
   prince-bookmark-level: 4;
 }
-/* line 77, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 77, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h5 {
   prince-bookmark-level: 5;
 }
-/* line 79, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 79, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h6 {
   prince-bookmark-level: 6;
 }
@@ -147,7 +147,7 @@ h1, h2, h3, h4, h5, h6 {
 /* ============= */
 /* = CONTAINER = */
 /* ============= */
-/* line 87, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 87, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.container {
   height: 7in;
   left: 0;
@@ -157,11 +157,11 @@ div.container {
   width: 9.25in;
   z-index: -1;
 }
-/* line 96, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 96, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.frontcover {
   background: white;
 }
-/* line 98, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 98, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.frontcover div {
   width: 91%;
   margin: 0 auto;
@@ -170,29 +170,29 @@ div.frontcover div {
   position: absolute;
   top: 2.5in;
 }
-/* line 106, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 106, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.frontcover h1 {
   color: #00aaee;
   font-size: 42pt;
   text-align: center;
 }
-/* line 111, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 111, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.frontcover p {
   font-size: 18pt;
 }
-/* line 113, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 113, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.frontcover p.description {
   color: #666666;
   font: normal normal normal 16pt/normal Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
   margin-top: 5mm;
 }
-/* line 117, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 117, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.frontcover p.authors {
   color: #666666;
   font: italic normal normal 14pt/normal Baskerville, "Hoefler Text", Garamond, "Times New Roman", serif;
   margin-top: 3mm;
 }
-/* line 121, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 121, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.frontcover * {
   margin: 0;
 }
@@ -203,38 +203,38 @@ div.frontcover * {
 /* =========== */
 /* = CHAPTER = */
 /* =========== */
-/* line 132, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 132, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 #chapters {
   counter-reset: page 1;
   counter-reset: chapter 0;
   page-break-before: always;
 }
 
-/* line 137, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 137, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter {
   color: #444444;
   counter-reset: footnote 0;
   page-break-after: always;
 }
-/* line 141, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 141, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter p {
   margin-bottom: 5mm;
   line-height: 1.4;
 }
-/* line 144, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 144, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter p em {
   font-style: italic;
 }
-/* line 146, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 146, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter a {
   color: blue;
   text-decoration: none;
 }
-/* line 149, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 149, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h2, .chapter h3, .chapter h4, .chapter h5 {
   margin: 25pt 0 15pt 0;
 }
-/* line 151, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 151, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h2 {
   color: #222222;
   counter-increment: chapter;
@@ -242,7 +242,7 @@ div.frontcover * {
   line-height: 1;
   string-set: header "Chapter " counter(chapter) ": " content();
 }
-/* line 157, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 157, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h2::before {
   content: "Chapter " counter(chapter);
   color: #999999;
@@ -252,41 +252,41 @@ div.frontcover * {
   margin-bottom: 0.3em;
   white-space: pre;
 }
-/* line 165, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 165, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h3 {
   color: #b62f32;
   font-size: 28px;
 }
-/* line 168, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 168, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h4 {
   font-size: 18px;
 }
-/* line 170, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 170, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h5 {
   font-size: 15px;
 }
-/* line 172, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 172, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .chapter h6 {
   font-size: 15px;
   font-weight: normal;
   text-transform: uppercase;
 }
 
-/* line 177, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 177, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .imprint {
   background-color: #e2e7e2;
   page: cover;
   string-set: header "";
   color: #5b5b5b;
 }
-/* line 182, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 182, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .imprint * {
   color: #5b5b5b;
   font-family: "Lucida Grande", arial, sans-serif;
   font-size: 10pt;
   margin: 0 0 2pt 0;
 }
-/* line 187, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 187, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .imprint div {
   left: 0.5in;
   position: absolute;
@@ -296,7 +296,7 @@ div.frontcover * {
 /* ========== */
 /* = CODING = */
 /* ========== */
-/* line 196, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 196, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 pre {
   font-family: monaco, monospace;
   font-size: 9pt;
@@ -317,14 +317,14 @@ pre {
   -moz-border-radius-bottomleft: 4mm;
   -webkit-border-bottom-left-radius: 4mm;
 }
-/* line 205, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 205, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 pre span, pre code {
   font-family: monaco, monospace;
   font-size: 9pt;
   line-height: 1.4;
 }
 
-/* line 210, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 210, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 code {
   font-family: monaco, monospace;
   font-size: 11pt;
@@ -333,17 +333,17 @@ code {
 /* ========= */
 /* = TABLE = */
 /* ========= */
-/* line 218, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 218, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 table {
   border-collapse: collapse;
 }
 
-/* line 221, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 221, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 thead th {
   background-color: #e9e9e9;
 }
 
-/* line 224, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 224, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 th, td {
   border: 1px solid #cccccc;
   font-size: 11pt;
@@ -353,12 +353,12 @@ th, td {
 /* ========= */
 /* = LISTS = */
 /* ========= */
-/* line 233, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 233, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 li {
   margin-bottom: 8pt;
 }
 
-/* line 235, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
+/* line 235, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 ul, ol {
   margin-left: 15pt;
   list-style-type: disc;
@@ -367,15 +367,11 @@ ul, ol {
 /* ========== */
 /* = FIGURE = */
 /* ========== */
-<<<<<<< HEAD
-/* line 246, ../sass/layout.sass */
+/* line 243, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .figure {
   /* This is just some fancy CSS3 that will print out the contents of an Alt Tag after an image... */
 }
-/* line 248, ../sass/layout.sass */
-=======
-/* line 243, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
+/* line 245, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .figure img:after {
   content: attr("alt");
   display: block;
@@ -385,18 +381,12 @@ ul, ol {
   margin-bottom: 0.5in;
 }
 
-<<<<<<< HEAD
-/* line 256, ../sass/layout.sass */
+/* line 253, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .figure {
   margin-top: 0.5in;
 }
-/* line 258, ../sass/layout.sass */
+/* line 255, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .figure img {
-=======
-/* line 248, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
-img {
-  max-width: 854px;
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
   prince-image-resolution: 96dpi;
   display: block;
   max-width: 7.5in;
@@ -404,61 +394,33 @@ img {
   overflow: hidden;
 }
 
-<<<<<<< HEAD
-/* line 265, ../sass/layout.sass */
+/* line 262, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 img {
   prince-image-resolution: 96dpi;
-=======
-/* line 252, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
-.figure {
-  margin: 1em 0;
-  overflow: auto;
-  text-align: center;
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
 }
 
 /* ===================== */
 /* = TABLE OF CONTENTS = */
 /* ===================== */
-<<<<<<< HEAD
-/* line 273, ../sass/layout.sass */
+/* line 269, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents {
   page: toc;
 }
-/* line 275, ../sass/layout.sass */
+/* line 271, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents h2 {
   font-size: 36pt;
 }
-/* line 277, ../sass/layout.sass */
-=======
-/* line 261, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
-div.table-of-contents {
-  page: toc;
-}
-/* line 263, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
-div.table-of-contents h2 {
-  font-size: 36pt;
-}
-/* line 265, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
+/* line 273, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents a {
   font-size: 11pt;
   text-decoration: none;
 }
-<<<<<<< HEAD
-/* line 280, ../sass/layout.sass */
-=======
-/* line 268, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
+/* line 276, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents div.level2 a {
   color: black;
   font-weight: bold;
 }
-<<<<<<< HEAD
-/* line 283, ../sass/layout.sass */
-=======
-/* line 271, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
+/* line 279, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents #toc {
   column-count: 2;
   column-fill: auto;
@@ -466,35 +428,19 @@ div.table-of-contents #toc {
   column-rule: none;
   column-width: 45%;
 }
-<<<<<<< HEAD
-/* line 289, ../sass/layout.sass */
+/* line 285, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents #toc div {
   padding-bottom: 10px;
 }
-/* line 291, ../sass/layout.sass */
+/* line 287, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents div.level3 {
   margin-left: 20px;
 }
-/* line 293, ../sass/layout.sass */
+/* line 289, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents #toc div.level3 a {
   color: #555555;
 }
-/* line 296, ../sass/layout.sass */
-=======
-/* line 277, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
-div.table-of-contents #toc div {
-  padding-bottom: 10px;
-}
-/* line 279, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
-div.table-of-contents div.level3 {
-  margin-left: 20px;
-}
-/* line 281, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
-div.table-of-contents #toc div.level3 a {
-  color: #555555;
-}
-/* line 284, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
+/* line 292, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents div a::before {
   color: #888888;
   content: target-counter(attr(href), page) " ";
@@ -504,19 +450,11 @@ div.table-of-contents div a::before {
   margin-right: 4px;
   width: 40px;
 }
-<<<<<<< HEAD
-/* line 304, ../sass/layout.sass */
+/* line 300, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents div.level3 a::before {
   width: 20px;
 }
-/* line 306, ../sass/layout.sass */
-=======
-/* line 292, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
-div.table-of-contents div.level3 a::before {
-  width: 20px;
-}
-/* line 294, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
+/* line 302, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 div.table-of-contents div.level4, div.table-of-contents div.level5, div.table-of-contents div.level6 {
   display: none;
 }
@@ -524,11 +462,7 @@ div.table-of-contents div.level4, div.table-of-contents div.level5, div.table-of
 /* ===================== */
 /* = OTHER TEXT TWEAKS = */
 /* ===================== */
-<<<<<<< HEAD
-/* line 313, ../sass/layout.sass */
-=======
-/* line 301, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
+/* line 309, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 acronym:after {
   content: " (" attr(title) ")";
 }
@@ -536,20 +470,12 @@ acronym:after {
 /* ============= */
 /* = HIGHLIGHT = */
 /* ============= */
-<<<<<<< HEAD
-/* line 320, ../sass/layout.sass */
-=======
-/* line 308, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
+/* line 316, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .highlight {
   margin: 5mm 0;
   font-size: 20pt;
 }
-<<<<<<< HEAD
-/* line 323, ../sass/layout.sass */
-=======
-/* line 311, /Users/edward/Dropbox/Public Shopify/Shopify-Developer-Book/templates/html/sass/layout.sass */
->>>>>>> cda264a33ec81f9957864a4f529a3700d7fd15b9
+/* line 319, /Users/dlazar/Documents/workspace/book/templates/html/sass/layout.sass */
 .highlight strong {
   color: #b62f32;
 }
